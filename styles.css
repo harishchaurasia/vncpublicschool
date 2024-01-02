@@ -1,0 +1,82 @@
+body {
+    font-family: 'New Rocker', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#contact-info {
+    color: blue;
+    margin-left: -1100px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+#social-media a {
+    color: red;
+    /* margin: 0 5px; */
+    margin-left: 30px;
+    /* text-decoration: none; */
+}
+
+
+
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info,
+.social-media-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-media-icons img {
+    margin-left: 10px; /* Adjust spacing between icons */
+}
+
+
+
+
+
+#main-nav {
+    background-color: #247510;
+    margin-bottom: 25px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0px 16px;
+}
+
+main {
+    text-align: center;
+}
+
+#school-logo img {
+    width: 150px; /* Adjust as necessary */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#school-motto h1 {
+    font-size: 3em; /* Adjust as necessary */
+    color: navy;
+    margin: 0;
+}
+
+#school-motto p {
+    font-size: 1em; /* Adjust as necessary */
+    color: green;
+    margin: 0;
+}
