@@ -1,8 +1,9 @@
 body {
-    font-family: 'New Rocker', cursive;
+    /* font-family: 'New Rocker', cursive; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #FCFFFD;
 }
 
 header {
@@ -16,38 +17,42 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px; /* Add padding on both sides */
+    margin-bottom: 10px;
 }
 
 #contact-info {
     color: rgb(0, 0, 0);
     margin-top: 0px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     font-family:Arial, Helvetica, sans-serif ;
 }
 
-
-.fa-brands {
+/* .fa-brands {
     font-size: 2.0em;
-}
+} */
 
 #main-nav {
+    font-family: 'New Rocker', cursive;
     width: 100%;
     margin: 0 auto;
-    background-color: #03710e;
+    /* background-color: #5d737e; */
+    /* background-color: #f58822; */
+    background-color: green;
     padding: 10px;
     text-align: center;
   }
   
   #main-nav a {
     text-decoration: none;
-    color: white;
-    margin-right: 20px; /* Optional: Add margin between links */
+    /* color: #64b6ae; */
+    color: #000000;
+    margin-left: 15px;
+    margin-right: 15px; /* Optional: Add margin between links */
   }
 
 #school-logo img {
     width: 150px;
     height: auto;
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -63,19 +68,31 @@ header {
 }
 
 .fa-brands {
-    font-size: 1.5em; /* Adjust size as needed */
+    font-size: 1.5em;
 }
 
 #school-motto h1 {
-    font-size: 3em;
-    color: navy;
+    font-family: 'New Rocker', cursive;
+    font-size: 3.3em;
+    /* color: navy; */
+    color: rgb(0, 0, 170);
     margin: 0;
     text-align: center;
 }
 
 #school-motto p {
-    font-size: 1em;
+    font-family: 'New Rocker', cursive;
+    font-size: 1.1em;
     color: green;
     margin: 0;
     text-align: center;
+}
+
+
+#school-summary{
+    font-size: 1.1rem;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    margin-left: 100px;
+    margin-right: 100px;
 }
