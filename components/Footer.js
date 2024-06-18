@@ -22,6 +22,7 @@ const logoStyle = {
     width: '27px',
     height: '31px',
     verticalAlign: 'middle',
+    marginBottom:'4px',
 };
 
 const textStyle = {
@@ -30,6 +31,7 @@ const textStyle = {
     fontFamily: 'New Rocker, cursive',
     textTransform: 'capitalize',
     marginLeft: '10px',
+    // marginTop:'10px',
 };
 
 export default Footer;

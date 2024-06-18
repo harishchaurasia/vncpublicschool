@@ -4,11 +4,11 @@ import Link from 'next/link';
 const Nav = () => {
     return (
         <nav style={navStyle}>
-            <Link href="#mission" style={linkStyle}>Our Mission</Link>
+            <Link href="#ourmission" style={linkStyle}>Our Mission</Link>
             <Link href="#gallery" style={linkStyle}>Gallery</Link>
-            <Link href="#achievements" style={linkStyle}>Achievements</Link>
             <Link href="#about" style={linkStyle}>About</Link>
-            <Link href="#contact" style={linkStyle}>Contact Us</Link>
+            <Link href="#achievements" style={linkStyle}>Achievements</Link>
+            <Link href="#contactus" style={linkStyle}>Contact Us</Link>
         </nav>
     );
 };

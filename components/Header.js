@@ -25,7 +25,10 @@ const Header = () => {
             </div>
             <hr style={lineStyle} />
             <div style={contentStyle}>
+                {/* <img style={logoStyle} src="/logo.png" alt="School Logo" /> */}
+                <a href="https://www.vncpublicschool.com" rel="noopener noreferrer">
                 <img style={logoStyle} src="/logo.png" alt="School Logo" />
+                </a>
                 <div style={infoStyle}>
                     <h1 style={titleStyle}>VNC Public School</h1>
                     <p style={sloganStyle}>Empowering young minds for a brighter future</p>
