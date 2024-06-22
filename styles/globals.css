@@ -18,9 +18,7 @@
     animation: ticker 15s linear infinite;
   }
 
-
-
-
+  
 /* FOR IMAGE CAROUSEL */
 
 .relative {
@@ -33,7 +31,7 @@
   max-width: 1280px;
   margin: auto;
   perspective: 1000px;
-  padding: 10px; /* Add padding to the container */
+  padding: 20px; /* Add padding to the container */
   box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
@@ -105,4 +103,24 @@
 
 .carousel-button.next {
   right: 10px;
+}
+
+.carousel-markers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.carousel-marker {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-marker.active {
+  background-color: rgba(0, 0, 0, 0.9);
 }

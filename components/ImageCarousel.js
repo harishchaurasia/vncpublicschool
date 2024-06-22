@@ -18,7 +18,7 @@ const ImageCarousel = () => {
   return (
     <div className="relative">
       <div className="carousel-container">
-        <Carousel>
+        <Carousel interval={3000}>
           {imageFilenames.map((filename, index) => (
             <img
               key={index}

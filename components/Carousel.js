@@ -1,5 +1,6 @@
 // components/Carousel.js
 import React, { useState, useEffect } from 'react';
+// import './Carousel.css'; // Ensure you import your CSS file
 
 const Carousel = ({ children, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,6 +51,17 @@ const Carousel = ({ children, interval = 3000 }) => {
       <button className="carousel-button next" onClick={nextSlide}>
         &#10095;
       </button>
+      <div className="carousel-markers">
+        {React.Children.map(children, (_, index) => (
+          <div
+            key={index}
+            className={`carousel-marker ${
+              index === currentIndex ? 'active' : ''
+            }`}
+            onClick={() => setCurrentIndex(index)}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 };

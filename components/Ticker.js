@@ -18,11 +18,12 @@ const tickerContainer = {
   width: '100%',
   overflow: 'hidden',
   // backgroundColor: '#b80000  ',
-  color: '##9e0000',
+  color: '#9e0000',
   fontSize: '20px',
   fontWeight: 'bold',
   position: '10px',
   bottom: '05',
   left: '0',
   zIndex: '1000',
+  marginTop: '10px'
 };

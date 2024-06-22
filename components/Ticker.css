@@ -14,4 +14,5 @@
   color: red;
   white-space: nowrap;
   animation: ticker 1s linear infinite;
+  margin-top: '20px';
 }

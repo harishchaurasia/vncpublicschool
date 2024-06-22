@@ -17,6 +17,7 @@ export default function Home() {
     <div style={{ minHeight: '100vh', position: 'relative', paddingBottom: '100px' }}>
       <Head>
         <title>VNC Public School</title>
+        <link rel="icon" href="/logo.png" />
         <meta name="description" content="Empowering young minds for a brighter future" />
       </Head>
       <Header />
