@@ -1,0 +1,108 @@
+/* styles/globals.css */
+
+
+/* FOR NEWS TICKER */
+@keyframes ticker {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .tickerContent {
+    display: inline-block;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: ticker 15s linear infinite;
+  }
+
+
+
+
+/* FOR IMAGE CAROUSEL */
+
+.relative {
+  background-color: #ebf5ee;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  perspective: 1000px;
+  padding: 10px; /* Add padding to the container */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.carousel-slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  padding: 10px; /* Add padding around the slides */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.carousel-slide {
+  position: absolute;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  width: 60%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 0 10px; /* Add margin between slides */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 10px; /* Add padding inside each slide */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.carousel-slide.next {
+  opacity: 0.5;
+  transform: translateX(80%) scale(0.8);
+  z-index: 0;
+}
+
+.carousel-slide.prev {
+  opacity: 0.5;
+  transform: translateX(-80%) scale(0.8);
+  z-index: 0;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}

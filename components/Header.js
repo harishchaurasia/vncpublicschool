@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Header = () => {
     return (
@@ -9,6 +9,9 @@ const Header = () => {
                     Phone: +91 7054858403 | Email: vncpublicgajpur@gmail.com
                 </div>
                 <div style={socialIconsStyle}>
+                    <a href='https://wa.me/917054858403' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
+                        <FaWhatsapp style={iconStyle} />
+                    </a>
                     <a href='mailto:vncpublicgajpur@gmail.com' style={{ textDecoration: 'none' }}>
                         <FaEnvelope style={iconStyle} />
                     </a>
@@ -39,13 +42,14 @@ const Header = () => {
 };
 
 const headerStyle = {
-    background: 'white',
-    padding: '20px 0px',
+    // background: 'white',
+    background: '#D6F1DF',
+    padding: '10px 0px',
     position: 'relative',
 };
 
 const topRowStyle = {
-    display: 'flex',
+    display: 'flex', 
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '0px 20px',
@@ -70,7 +74,7 @@ const iconStyle = {
 const lineStyle = {
     border: 'none',
     borderTop: '2px solid #64B6AC',
-    margin: '20px 0',
+    margin: '10px 0',
 };
 
 const contentStyle = {

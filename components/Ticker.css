@@ -1,0 +1,24 @@
+  /* components/Ticker.module.css */
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.tickerContainer {
+  width: '40px';
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+.tickerContent {
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+  animation: ticker 1s linear infinite;
+
+}

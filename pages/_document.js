@@ -6,10 +6,15 @@ export default function Document() {
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet" />
             </Head>
-            <body>
+            <body style={bodyStyle}>
                 <Main />
                 <NextScript />
             </body>
         </Html>
     );
 }
+
+
+const bodyStyle = {
+margin: '0'
+};

@@ -31,7 +31,7 @@ const textStyle = {
     fontFamily: 'New Rocker, cursive',
     textTransform: 'capitalize',
     marginLeft: '10px',
-    // marginTop:'10px',
+    marginRight:'20px',
 };
 
 export default Footer;
