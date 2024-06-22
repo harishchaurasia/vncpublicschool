@@ -17,7 +17,7 @@ export default Ticker;
 const tickerContainer = {
   width: '100%',
   overflow: 'hidden',
-  // backgroundColor: '#b80000  ',
+  backgroundColor: '#D6F1DF',
   color: '#9e0000',
   fontSize: '20px',
   fontWeight: 'bold',
@@ -25,5 +25,8 @@ const tickerContainer = {
   bottom: '05',
   left: '0',
   zIndex: '1000',
-  marginTop: '10px'
+  // marginTop: '10px',
+  // marginBottom: '10px',
+  paddingTop:'10px',
+  paddingBottom:'10px'
 };

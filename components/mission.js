@@ -5,4 +5,15 @@
 // creating a brighter, empowered future as we guide students to excel 
 // in a supportive and dynamic environment. At VNC, each day is an 
 // opportunity to learn, grow, and shape the future.
+import React from 'react';
+
+
+
+const Mission = () => {
+    return (
+        <h1>
+            Our Mission
+        </h1>
+    );
+};
 

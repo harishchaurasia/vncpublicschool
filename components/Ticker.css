@@ -1,4 +1,4 @@
-  /* components/Ticker.module.css */
+
 @keyframes ticker {
   0% {
     transform: translateX(100%);
@@ -14,5 +14,4 @@
   color: red;
   white-space: nowrap;
   animation: ticker 1s linear infinite;
-  margin-top: '20px';
 }

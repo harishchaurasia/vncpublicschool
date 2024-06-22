@@ -1,6 +1,7 @@
 // pages/index.js
 import Head from 'next/head';
 import Header from '../components/Header';
+import Mission from '../components/Mission';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Ticker from '../components/Ticker';
@@ -23,10 +24,11 @@ export default function Home() {
       <Header />
       <Nav />
       <Ticker notice={notice} />
-      <hr style={lineStyle} />
       <ImageCarousel/>
       <main style={mainStyle}>
-        {/* Main content goes here */}
+        {/* Main content goes here */
+        <Mission/>
+        }
       </main>
       <Footer />
 
