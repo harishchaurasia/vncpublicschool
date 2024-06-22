@@ -21,7 +21,6 @@ export default function Home() {
       </Head>
       <Header />
       <Nav />
-      <hr style={lineStyle} />
       <Ticker notice={notice} />
       <hr style={lineStyle} />
       <ImageCarousel/>
