@@ -1,14 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Nav = () => {
     return (
         <nav style={navStyle}>
-            <Link href="#ourmission" style={linkStyle}>Our Mission</Link>
-            <Link href="#gallery" style={linkStyle}>Gallery</Link>
-            <Link href="#about" style={linkStyle}>About</Link>
-            <Link href="#achievements" style={linkStyle}>Achievements</Link>
-            <Link href="#contactus" style={linkStyle}>Contact Us</Link>
+            <ScrollLink to="ourmission" smooth={true} duration={500} style={linkStyle}>Our Mission</ScrollLink>
+            <ScrollLink to="gallery" smooth={true} duration={500} style={linkStyle}>Gallery</ScrollLink>
+            <ScrollLink to="about" smooth={true} duration={500} style={linkStyle}>About</ScrollLink>
+            <ScrollLink to="achievements" smooth={true} duration={500} style={linkStyle}>Achievements</ScrollLink>
+            <ScrollLink to="contactus" smooth={true} duration={500} style={linkStyle}>Contact Us</ScrollLink>
         </nav>
     );
 };
@@ -18,6 +18,7 @@ const navStyle = {
     display: 'flex',
     justifyContent: 'center',
     padding: '20px 0',
+    //position:'fixed'
 };
 
 const linkStyle = {
@@ -27,6 +28,7 @@ const linkStyle = {
     textTransform: 'capitalize',
     textDecoration: 'none',
     margin: '0 32px',
+cursor: 'pointer'
 };
 
 export default Nav;

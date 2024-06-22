@@ -1,7 +1,7 @@
 // pages/index.js
 import Head from 'next/head';
 import Header from '../components/Header';
-import Mission from '../components/Mission';
+import Mission from './Mission';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Ticker from '../components/Ticker';
@@ -26,12 +26,24 @@ export default function Home() {
       <Ticker notice={notice} />
       <ImageCarousel/>
       <main style={mainStyle}>
-        {/* Main content goes here */
-        <Mission/>
-        }
-      </main>
+                {/* Ensure the id attributes are correctly placed */}
+                <section id="ourmission">
+                    <Mission />
+                </section>
+                <section id="gallery">
+                    {/* Gallery content goes here */}
+                </section>
+                <section id="about">
+                    {/* About content goes here */}
+                </section>
+                <section id="achievements">
+                    {/* Achievements content goes here */}
+                </section>
+                <section id="contactus">
+                    {/* Contact Us content goes here */}
+                </section>
+            </main>
       <Footer />
-
     </div>
   );
 }
@@ -47,5 +59,6 @@ const lineStyle = {
   border: 'none',
   borderTop: '2px solid #64B6AC',
   margin: '10px 0',
+
 };
 
