@@ -10,7 +10,7 @@ import { useState } from 'react';
 
 
 export default function Home() {
-  const [notice, setNotice] = useState('Admissions Open!');
+  const [notice, setNotice] = useState('Admissions Open for 2024-25 Session!');
 
 
   return (

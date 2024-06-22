@@ -5,7 +5,7 @@ import React from 'react';
 const Ticker = ({ notice }) => {
   return (
     <div style={tickerContainer}>
-      <div className="tickerContent">
+      <div className= 'tickerContent'>
         {notice}
       </div>
     </div>
@@ -14,23 +14,11 @@ const Ticker = ({ notice }) => {
 
 export default Ticker;
 
-
-// const Ticker = ({ notice }) => {
-//   return (
-//     <div className={styles.tickerContainer}>
-//       <div className={styles.tickerContent}>
-//         {notice}
-//       </div>
-//     </div>
-//   );
-// };
-// export default Ticker;
-
 const tickerContainer = {
   width: '100%',
   overflow: 'hidden',
-  backgroundColor: '#b80000  ',
-  color: '#000000',
+  // backgroundColor: '#b80000  ',
+  color: '##9e0000',
   fontSize: '20px',
   fontWeight: 'bold',
   position: '10px',
