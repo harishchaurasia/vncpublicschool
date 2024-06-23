@@ -66,8 +66,8 @@ const socialIconsStyle = {
 };
 
 const iconStyle = {
-    width: '33px',
-    height: '33px',
+    width: '30px',
+    height: '30px',
     color: '#000000',
 };
 

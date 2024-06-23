@@ -11,18 +11,30 @@ const Mission = () => {
         </h1>
         <div>
             <p style={missionContentStyle}>
-                VNC Public School is dedicated to delivering top-tier education, 
-                bringing the resources and opportunities of urban schools to our 
-                rural community at an affordable cost. Embark on a transformative 
-                educational journey where learning transcends textbooks. As a 
-                beacon of innovation, we focus on character development and the 
-                nurturing of individual talents. 
-                
+            VNC Public School is dedicated to providing the highest quality education, 
+            ensuring that the resources and opportunities typically found in urban 
+            settings are accessible in our rural community at a significantly lower 
+            cost. Our commitment to excellence creates an unparalleled educational 
+            experience that goes far beyond traditional learning. At VNCPS, we believe 
+            in nurturing individual talents and fostering character development, 
+            creating an environment where students thrive academically, socially, 
+            and personally.
+            Embark on a transformative educational journey with us, where each day is 
+            filled with opportunities to learn, grow, and shape a brighter future. Our 
+            innovative approach to education blends modern teaching methods with a deep
+            respect for individual strengths, preparing students to excel in an ever-changing 
+            world. We are passionate about guiding students to discover their potential 
+            and empowering them to become confident, capable leaders.
+
                 <br/>
-                Join us in crafting a brighter, 
-                empowered future as we inspire students to excel within a dynamic 
-                and supportive environment. At VNCPS, every day is a chance to 
-                learn, grow, and shape the leaders of tomorrow.
+
+                Join us at VNC Public School, where education is a dynamic and engaging 
+                experience. Our supportive environment encourages curiosity, creativity, 
+                and critical thinking, ensuring that every student feels valued and inspired. 
+                Together, we create a vibrant community of learners dedicated to excellence 
+                and driven by a shared vision of success. At VNCPS, the journey of education 
+                is as important as the destination, and we are committed to making each step 
+                of that journey extraordinary. 
             </p>
         </div>
         </div>
@@ -31,12 +43,6 @@ const Mission = () => {
 
 export default Mission;
 
-
-// const MissionDivStyle = {
-//     textAlign: 'center',
-//     fontSize:'25px',
-//     fontFamily: 'New Rocker, cursive'
-// };
 
 const MissionHeading = {
     textAlign: 'center',
@@ -47,8 +53,11 @@ const MissionHeading = {
 
 const missionContentStyle = {
     textAlign: 'center',
-    fontSize:'20px',
-    fontFamily: 'Lora, serif',
-    fontWeight: 'bold'
+    //textStyle: 'justify', 
+    justifyContent: 'center',
+    fontSize:'18px',
+    fontFamily: 'Roboto, sans-serif',
+    fontWeight: '400',
+    fontStyle: 'normal'
 };
 
