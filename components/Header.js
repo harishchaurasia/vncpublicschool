@@ -43,7 +43,7 @@ const Header = () => {
 
 const headerStyle = {
     // background: 'white',
-    background: '#D6F1DF',
+    background: '#d1eeda',
     padding: '10px 0px',
     position: 'relative',
 };
