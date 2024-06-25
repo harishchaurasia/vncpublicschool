@@ -1,6 +1,6 @@
 
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { AlignCenter } from 'react-feather';
 
 
 const Mission = () => {
@@ -9,6 +9,14 @@ const Mission = () => {
         <h1 style={MissionHeading}>
             Our Mission
         </h1>
+        <div>
+            <div className='successContainer'>
+                <div>
+                <img style={successVectorStyle} src='/success.jpg' alt="success vector, "/>
+                </div>
+            </div>
+           
+        </div>
         <div>
             <p style={missionContentStyle}>
             VNC Public School is dedicated to providing the highest quality education, 
@@ -58,6 +66,12 @@ const missionContentStyle = {
     fontSize:'18px',
     fontFamily: 'Roboto, sans-serif',
     fontWeight: '400',
-    fontStyle: 'normal'
+    fontStyle: 'normal',
+    margin: '10px'
 };
 
+const successVectorStyle = {
+    width: '100%',
+    height: 'auto',
+    display: 'block',
+};
