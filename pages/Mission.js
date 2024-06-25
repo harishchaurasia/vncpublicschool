@@ -8,10 +8,10 @@ const Mission = () => {
                 Our Mission
             </h1>
             <div style={imageContainerStyle}>
-                <img style={centeredImageStyle} src='/DeskLamp.png' alt="Mission Image" />
-                <img style={centeredImageStyle} src='/DrawingCompass.png' alt="Mission Image" />
-                <img style={centeredImageStyle} src='/Telescope.png' alt="Mission Image" />
-                <img style={centeredImageStyle} src='/GraduationCap.png' alt="Mission Image" />
+            <div style={imgDivStyle}><img style={centeredImageStyle} src='/DeskLamp.png' alt="Mission Image" /></div>
+            <div style={imgDivStyle}><img style={centeredImageStyle} src='/DrawingCompass.png' alt="Mission Image" /></div>
+            <div style={imgDivStyle}><img style={centeredImageStyle} src='/Telescope.png' alt="Mission Image" /></div>
+            <div style={imgDivStyle}><img style={centeredImageStyle} src='/GraduationCap.png' alt="Mission Image" /></div>
             </div>
             <div>
                 <p style={missionContentStyle}>
@@ -80,3 +80,9 @@ const centeredImageStyle = {
     //boxShadow: '2px 4px 8px rgba(0, 0, 0, 0.4)' 
 };
 
+
+
+const imgDivStyle = {
+    marginTop: '10px',
+    marginBottom: '15px'
+}
