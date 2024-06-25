@@ -27,7 +27,7 @@ export default function Home() {
       <ImageCarousel/>
       <main style={mainStyle}>
                 {/* Ensure the id attributes are correctly placed */}
-                <section id="ourmission">
+                <section id="ourmission" style={missionSection}>
                     <Mission />
                 </section>
                 <section id="gallery">
@@ -59,6 +59,9 @@ const lineStyle = {
   border: 'none',
   borderTop: '2px solid #64B6AC',
   margin: '10px 0',
-
 };
+
+const missionSection = {
+    // backgroundColor: '#edfff3'
+}
 
