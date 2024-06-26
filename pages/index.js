@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Mission from './Mission';
+import Contact from './contactUs';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Ticker from '../components/Ticker';
@@ -39,8 +40,8 @@ export default function Home() {
                 <section id="achievements">
                     {/* Achievements content goes here */}
                 </section>
-                <section id="contactus">
-                    {/* Contact Us content goes here */}
+                <section id="contactus" style={contactSection}>
+                <Contact />
                 </section>
             </main>
       <Footer />
@@ -63,5 +64,9 @@ const lineStyle = {
 
 const missionSection = {
     // backgroundColor: '#edfff3'
+}
+
+const contactSection = {
+  
 }
 

@@ -12,7 +12,7 @@ const Header = () => {
                     <a href='https://wa.me/917054858403' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
                         <FaWhatsapp style={iconStyle} />
                     </a>
-                    <a href='mailto:vncpublicgajpur@gmail.com' style={{ textDecoration: 'none' }}>
+                    <a href='mailto:vncpublicgajpur@gmail.com' target='_blank' style={{ textDecoration: 'none' }}>
                         <FaEnvelope style={iconStyle} />
                     </a>
                     <a href='https://www.facebook.com/vncpublicschool/' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
