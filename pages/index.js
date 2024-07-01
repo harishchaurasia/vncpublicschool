@@ -2,12 +2,12 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Mission from './Mission';
-import Contact from './contactUs';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Ticker from '../components/Ticker';
 import ImageCarousel from '../components/ImageCarousel';
 import Gallery from '../components/Gallery';
+import Contact from '../components/Contact';
 
 
 import { useState } from 'react';

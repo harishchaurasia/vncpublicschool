@@ -23,7 +23,7 @@
 
 .relative{
   /* background-color: '#D6F1DF'; */
-  background-color: #edfff3
+  background-color: #edfff3;
 }
 
 .carousel-container {
@@ -88,22 +88,22 @@
 
 .carousel-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
+  top: 88%;
+  transform: translateY(50%);
+  background-color: rgba(0, 0, 0, 0.0001);
+  color: Red;
+  /* border: solid; */
   padding: 10px;
   cursor: pointer;
   z-index: 2;
 }
 
 .carousel-button.prev {
-  left: 10px;
+  left:150px;
 }
 
 .carousel-button.next {
-  right: 10px;
+  right: 150px;
 }
 
 .carousel-markers {
