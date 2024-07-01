@@ -7,6 +7,8 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Ticker from '../components/Ticker';
 import ImageCarousel from '../components/ImageCarousel';
+import Gallery from '../components/Gallery';
+
 
 import { useState } from 'react';
 
@@ -32,7 +34,7 @@ export default function Home() {
                     <Mission />
                 </section>
                 <section id="gallery">
-                    {/* Gallery content goes here */}
+                <Gallery />
                 </section>
                 <section id="about">
                     {/* About content goes here */}
@@ -69,4 +71,3 @@ const missionSection = {
 const contactSection = {
   
 }
-

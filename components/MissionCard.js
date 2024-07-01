@@ -28,7 +28,7 @@ const cardImageStyle = {
     maxWidth: '100px',
     width: '100%',
     height: 'auto',
-    marginBottom: '10px'
+    //marginBottom: '10px'
 };
 
 const cardHeadingStyle = {
