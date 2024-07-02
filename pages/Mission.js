@@ -1,5 +1,6 @@
 import React from 'react';
 import MissionCard from '../components/MissionCard';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Mission = () => {
     return (

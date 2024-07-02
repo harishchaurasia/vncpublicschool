@@ -10,11 +10,11 @@ const Footer = () => {
 };
 
 const footerStyle = {
-    background: 'white',
+    background: '#64B6AC',
     textAlign: 'right',
-    padding: '20px 0',
+    padding: '20px 0px',
     position: 'absolute',
-    bottom: 0,
+    // bottom: 0,
     width: '100%',
 };
 
@@ -22,7 +22,7 @@ const logoStyle = {
     width: '27px',
     height: '31px',
     verticalAlign: 'middle',
-    marginBottom:'4px',
+    // marginBottom:'4px',
 };
 
 const textStyle = {

@@ -27,7 +27,9 @@ export default function Home() {
       <Header />
       <Nav />
       <Ticker notice={notice} />
+      <section id="carousel">
       <ImageCarousel/>
+      </section>
       <main style={mainStyle}>
                 {/* Ensure the id attributes are correctly placed */}
                 <section id="ourmission" style={missionSection}>
@@ -39,7 +41,7 @@ export default function Home() {
                 <section id="about">
                     {/* About content goes here */}
                 </section>
-                <section id="achievements">
+                <section id="links">
                     {/* Achievements content goes here */}
                 </section>
                 <section id="contactus" style={contactSection}>
