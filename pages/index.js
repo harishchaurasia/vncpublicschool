@@ -49,17 +49,18 @@ export default function Home() {
                 <section id="contactus" style={contactSection}>
                 <Contact />
                 </section>
-            </main>
-      <Footer />
+        </main>
+      <div><Footer /></div>
     </div>
   );
 }
 
 const mainStyle = {
-  padding: '20px',
+  padding: '250px',
   background: 'linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%)',
   background: '#D6F1DF',
   minHeight: 'calc(100vh - 120px)', // Adjust based on your header and footer height
+  marginBottom:'50px'
 };
 
 const lineStyle = {
