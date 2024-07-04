@@ -19,7 +19,6 @@ const navStyle = {
     display: 'flex',
     justifyContent: 'center',
     padding: '20px 0',
-    //position:'fixed'
 };
 
 const linkStyle = {
@@ -29,7 +28,14 @@ const linkStyle = {
     textTransform: 'capitalize',
     textDecoration: 'none',
     margin: '0 32px',
-cursor: 'pointer'
+    cursor: 'pointer',
+};
+
+const buttonStyle = {
+    padding: '10px 20px',
+    backgroundColor: '#007BFF',
+    borderRadius: '5px',
+    color: '#fff',
 };
 
 export default Nav;

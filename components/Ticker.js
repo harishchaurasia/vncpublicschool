@@ -14,6 +14,8 @@ const Ticker = ({ notice }) => {
 
 export default Ticker;
 
+
+
 const tickerContainer = {
   width: '100%',
   overflow: 'hidden',

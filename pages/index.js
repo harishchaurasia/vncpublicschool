@@ -8,6 +8,8 @@ import Ticker from '../components/Ticker';
 import ImageCarousel from '../components/ImageCarousel';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
+import Links from '../components/Links';
+
 
 
 import { useState } from 'react';
@@ -42,7 +44,7 @@ export default function Home() {
                     {/* About content goes here */}
                 </section>
                 <section id="links">
-                    {/* Achievements content goes here */}
+                <Links/>
                 </section>
                 <section id="contactus" style={contactSection}>
                 <Contact />

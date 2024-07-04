@@ -1,5 +1,8 @@
 import React from 'react';
 import { AlignCenter } from 'react-feather';
+import ContactCard from './ContactCard';
+// import { Phone, Smartphone } from '@material-ui/icons';
+import { Phone, Smartphone } from 'react-feather';
 
 const ContactUs = () => {
     return (
@@ -15,27 +18,30 @@ const ContactUs = () => {
                 <p>Phone: +917054858403</p>
                 <p>Email: vncpublicgajpur@gmail.com</p>
             </div>
-            {/* <form style={formStyle}>
-                <h2>Send Us a Message</h2>
-                <div style={formGroupStyle}>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" style={inputStyle} />
-                </div>
-                <div style={formGroupStyle}>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" style={inputStyle} />
-                </div>
-                <div style={formGroupStyle}>
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" style={textareaStyle}></textarea>
-                </div>
-                <button type="submit" style={buttonStyle}>Submit</button>
-            </form> */}
+            <div style={contactDivStyle}>
+            <ContactCard 
+                officeName="Principal's Office" 
+                phone="+917054858403" 
+                whatsapp="917054858403" 
+            />
+            <ContactCard 
+                officeName="Fee Office" 
+                phone="+91234567891" 
+                whatsapp="0987654321" 
+            />
+            </div>
         </div>
     )
 };
 
 export default ContactUs;
+
+const contactDivStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '20px',
+    margin: '0 20px',
+};
 
 const containerStyle = {
     maxWidth: '800px',
@@ -54,42 +60,3 @@ const contactInfoStyle = {
     textAlign: 'center',
     marginBottom: '40px',
 };
-
-const formStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-};
-
-const formGroupStyle = {
-    marginBottom: '20px',
-    width: '100%',
-    maxWidth: '600px',
-};
-
-const inputStyle = {
-    width: '100%',
-    padding: '10px',
-    fontSize: '16px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-};
-
-const textareaStyle = {
-    width: '100%',
-    padding: '10px',
-    fontSize: '16px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-};
-
-const buttonStyle = {
-    padding: '10px 20px',
-    fontSize: '16px',
-    color: '#fff',
-    backgroundColor: '#007BFF',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-};
-

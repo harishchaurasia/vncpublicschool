@@ -27,6 +27,7 @@ const Gallery = () => {
 
 export default Gallery;
 
+
 const MissionHeading = {
   textAlign: 'center',
   fontSize: '45px',
