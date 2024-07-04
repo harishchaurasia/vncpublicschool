@@ -1,12 +1,13 @@
 import React from 'react';
-import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 
 const Header = () => {
     return (
         <header style={headerStyle}>
             <div style={topRowStyle}>
                 <div style={contactStyle}>
-                    Phone: +91 7054858403 | Email: vncpublicgajpur@gmail.com
+                    <p>  <FaPhoneAlt style={{ marginRight: '0px', color: '#000', verticalAlign: 'middle' }} /> +91 7054858403  |</p>
+                    <p> <FaEnvelope style={{ marginRight: '5px', color: '#000', verticalAlign: 'middle' }} /> vncpublicgajpur@gmail.com </p>
                 </div>
                 <div style={socialIconsStyle}>
                     <a href='https://wa.me/917054858403' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
@@ -56,9 +57,12 @@ const topRowStyle = {
 };
 
 const contactStyle = {
+    display: 'flex',
+    alignItems: 'center', // Center vertically
     fontSize: '20px',
     fontWeight: 'bold',
-};
+    gap: '8px', // Adds space between phone and email sections
+  };
 
 const socialIconsStyle = {
     display: 'flex',

@@ -58,5 +58,5 @@ const MissionHeading = {
 
 const contactInfoStyle = {
     textAlign: 'center',
-    marginBottom: '40px',
+    marginBottom: '45px',
 };

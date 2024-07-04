@@ -9,9 +9,7 @@ import ImageCarousel from '../components/ImageCarousel';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import Links from '../components/Links';
-
-
-
+import ScrollToTopButton from '../components/ScrollToTop';
 import { useState } from 'react';
 
 
@@ -21,6 +19,7 @@ export default function Home() {
 
   return (
     <div style={{ minHeight: '100vh', position: 'relative', paddingBottom: '100px' }}>
+      <section id="home">
       <Head>
         <title>VNC Public School</title>
         <link rel="icon" href="/logo.png" />
@@ -29,28 +28,29 @@ export default function Home() {
       <Header />
       <Nav />
       <Ticker notice={notice} />
+      </section>
       <section id="carousel">
       <ImageCarousel/>
       </section>
       <main style={mainStyle}>
                 {/* Ensure the id attributes are correctly placed */}
                 <section id="ourmission" style={missionSection}>
-                    <Mission />
+                  <Mission />
                 </section>
                 <section id="gallery">
-                <Gallery />
+                  <Gallery />
                 </section>
                 <section id="about">
-                    {/* About content goes here */}
                 </section>
                 <section id="links">
-                <Links/>
+                  <Links/>
                 </section>
                 <section id="contactus" style={contactSection}>
-                <Contact />
+                  <Contact />
                 </section>
         </main>
         <Footer />
+        <ScrollToTopButton />
     </div>
   );
 }

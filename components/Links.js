@@ -42,8 +42,8 @@ const sectionStyle = {
 };
 
 const admissionHead = {
-  fontSize: '25px',
-  fontFamily: 'New Rocker, cursive',
+  fontSize: '22px',
+  // fontFamily: 'New Rocker, cursive',
   marginBottom: '20px',
 };
 
