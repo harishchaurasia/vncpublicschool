@@ -46,7 +46,7 @@ const galleryItemStyle = {
   borderRadius: '8px',
   overflow: 'hidden',
   boxShadow: '2px 4px 8px rgba(0, 0, 0, 0.1)',
-  width: '450px', // Adjust width as needed
+  width: '425px', // Adjust width as needed
   backgroundColor: '#fff',
   position: 'relative', // Ensure positioning for inner content
 };

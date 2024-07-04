@@ -50,11 +50,10 @@ export default function Home() {
                 <Contact />
                 </section>
         </main>
-      <div><Footer /></div>
+        <Footer />
     </div>
   );
 }
-
 const mainStyle = {
   padding: '250px',
   background: 'linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%)',
