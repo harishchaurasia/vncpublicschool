@@ -15,9 +15,31 @@ const arrowButtonStyle = {
   zIndex: 1000,
 };
 
+// const scrollToTop = () => {
+//   document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+// };
+
 const scrollToTop = () => {
-  document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+  const target = document.getElementById('home');
+  const targetPosition = target.getBoundingClientRect().top;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition;
+  const duration = 500; // duration in milliseconds
+  let start = null;
+
+  const step = (timestamp) => {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    const progressRatio = Math.min(progress / duration, 1);
+    window.scrollTo(0, startPosition + distance * progressRatio);
+    if (progress < duration) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  requestAnimationFrame(step);
 };
+
 
 const ScrollToTopButton = () => (
   <button style={arrowButtonStyle} onClick={scrollToTop} aria-label="Scroll to top">

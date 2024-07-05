@@ -10,6 +10,7 @@ import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import Links from '../components/Links';
 import ScrollToTopButton from '../components/ScrollToTop';
+import VisitCounter from '../components/VisitCounter';
 import { useState } from 'react';
 
 

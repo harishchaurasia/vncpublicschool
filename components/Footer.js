@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import VisitCounter from '../components/VisitCounter';
 
 const Footer = () => {
     return (
@@ -13,14 +14,14 @@ const Footer = () => {
                     <p style={contactTextStyle}>Address: Gajpur Bazaar Rd, Gajpur, Gorakhpur,</p>
                     <p style={contactTextStyle}>Uttar Pradesh, 273413, India.</p>
                     <p style={contactTextStyle}>Email: vncpublicgajpur@gmail.com</p>
-                    <p style={contactTextStyle}>Phone: +91 7054858403</p>
+                    <p style={contactTextStyle}>Phone: +917054858403</p>
                     <a href="https://wa.me/917054858403" style={iconStyle}><FaWhatsapp /></a>
                     <a href="https://www.instagram.com/vncpublicschool/" style={iconStyle}><FaInstagram /></a>
                     <a href="https://www.facebook.com/vncpublicschool/" style={iconStyle}><FaFacebook /></a>
                     <a href="https://www.linkedin.com/company/vnc-public-school/" style={iconStyle}><FaLinkedin /></a>
                 </div>
                 <div style={socialMediaSectionStyle}>
-
+                <VisitCounter />
                 </div>
             </div>
             <div style={copyrightStyle}>
@@ -29,6 +30,17 @@ const Footer = () => {
         </footer>
     );
 };
+
+
+const socialMediaSectionStyle = {
+    position: 'absolute',
+    bottom: '0px',
+    right: '75px',
+    fontSize: '16px',
+    color: '#000',
+};
+
+
 
 const footerStyle = {
     background: '#64B6AC',
@@ -76,13 +88,6 @@ const contactSectionStyle = {
 const contactTextStyle = {
     margin: '8px 5px',
     fontSize: '18px',
-};
-
-const socialMediaSectionStyle = {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'right',
-    marginLeft: '370px',
 };
 
 const iconStyle = {
