@@ -5,9 +5,6 @@ import { Link as ScrollLink } from 'react-scroll';
 const Mission = () => {
     return (
         <div>
-            <h1 style={MissionHeading}>
-                Our Mission
-            </h1>
             <div>
             <div>
                 <p style={missionContentStyle}>
@@ -47,11 +44,6 @@ const Mission = () => {
 
 export default Mission;
 
-const MissionHeading = {
-    textAlign: 'center',
-    fontSize: '45px',
-    fontFamily: 'New Rocker, cursive'
-};
 
 const missionContentStyle = {
     textAlign: 'center',

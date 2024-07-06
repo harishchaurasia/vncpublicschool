@@ -11,9 +11,6 @@ const Gallery = () => {
 
   return (
     <div>
-      <h1 style={MissionHeading}>
-          Gallery 
-      </h1>
       <div style={galleryContainerStyle}>
         {images.map((image, index) => (
           <div key={index} style={galleryItemStyle}>
@@ -26,13 +23,6 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-
-const MissionHeading = {
-  textAlign: 'center',
-  fontSize: '45px',
-  fontFamily: 'New Rocker, cursive'
-};
 
 const galleryContainerStyle = {
   display: 'flex',

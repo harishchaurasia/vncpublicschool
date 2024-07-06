@@ -29,6 +29,7 @@ const cardStyle = {
     margin: '0px 35px',
     boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
     textAlign: 'center', // Center the card contents
+    backgroundColor: '#edfff3'
 };
 
 const officeNameStyle = {

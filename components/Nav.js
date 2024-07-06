@@ -4,7 +4,7 @@ import { Link as ScrollLink } from 'react-scroll';
 const Nav = () => {
     return (
         <nav style={navStyle}>
-            <ScrollLink to="carousel" smooth={true} duration={500} style={linkStyle}>Home</ScrollLink>
+            <ScrollLink to="home" smooth={true} duration={500} style={linkStyle}>Home</ScrollLink>
             <ScrollLink to="ourmission" smooth={true} duration={500} style={linkStyle}>Our Mission</ScrollLink>
             <ScrollLink to="gallery" smooth={true} duration={500} style={linkStyle}>Gallery</ScrollLink>
             <ScrollLink to="about" smooth={true} duration={500} style={linkStyle}>About</ScrollLink>
