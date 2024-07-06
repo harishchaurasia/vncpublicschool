@@ -3,6 +3,7 @@ import { AlignCenter } from 'react-feather';
 import ContactCard from './ContactCard';
 // import { Phone, Smartphone } from '@material-ui/icons';
 import { Phone, Smartphone } from 'react-feather';
+import DeskCard from './Desk';
 
 const ContactUs = () => {
     return (
@@ -17,6 +18,27 @@ const ContactUs = () => {
                 <p>Gorakhpur, Uttar Pradesh, 273413. </p>
                 <p>Phone: +917054858403</p>
                 <p>Email: vncpublicgajpur@gmail.com</p>
+            </div>
+            <div>
+            <h1>Welcome to Our School</h1>
+            <DeskCard
+                image="./principal.png"
+                name="John Doe"
+                position="Principal"
+                message="Welcome to our school. We are dedicated to providing the best education for our students."
+            />
+                <DeskCard
+                image="./principal.png"
+                name="John Doe"
+                position="Principal"
+                message="Welcome to our school. We are dedicated to providing the best education for our students."
+            />
+                <DeskCard
+                image="./principal.png"
+                name="John Doe"
+                position="Principal"
+                message="Welcome to our school. We are dedicated to providing the best education for our students."
+            />
             </div>
             <div style={contactDivStyle}>
             <ContactCard 

@@ -15,10 +15,10 @@ const Footer = () => {
                     <p style={contactTextStyle}>Uttar Pradesh, 273413, India.</p>
                     <p style={contactTextStyle}>Email: vncpublicgajpur@gmail.com</p>
                     <p style={contactTextStyle}>Phone: +917054858403</p>
-                    <a href="https://wa.me/917054858403" style={iconStyle}><FaWhatsapp /></a>
-                    <a href="https://www.instagram.com/vncpublicschool/" style={iconStyle}><FaInstagram /></a>
-                    <a href="https://www.facebook.com/vncpublicschool/" style={iconStyle}><FaFacebook /></a>
-                    <a href="https://www.linkedin.com/company/vnc-public-school/" style={iconStyle}><FaLinkedin /></a>
+                    <a href="https://wa.me/917054858403" target='_blank' style={iconStyle}><FaWhatsapp /></a>
+                    <a href="https://www.instagram.com/vncpublicschool/" target='_blank' style={iconStyle}><FaInstagram /></a>
+                    <a href="https://www.facebook.com/vncpublicschool/" target='_blank' style={iconStyle}><FaFacebook /></a>
+                    <a href="https://www.linkedin.com/company/vnc-public-school/" target='_blank' style={iconStyle}><FaLinkedin /></a>
                 </div>
                 <div style={socialMediaSectionStyle}>
                 <VisitCounter />
