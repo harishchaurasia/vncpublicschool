@@ -29,10 +29,12 @@ body, html {
 /* MAIN SECTION */
 .main-style {
   padding: 10px;
-  background: linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%);
-  background: #D6F1DF;
+  /* background: linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%); */
+  /* background: #D6F1DF; */
+  background: #edfff3;
   min-height: calc(100vh - 120px);
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 /* .container {

@@ -4,8 +4,8 @@ import MissionCard from '../components/MissionCard';
 const Mission = () => {
   return (
     <div className="p-4">
-      <div className="flex justify-center">
-        <p className="text-base md:text-lg font-normal my-4 mx-2 font-roboto">
+      <div className="text-center px-8">
+        <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl font-normal my-4 mx-2 leading-relaxed">
           VNC Public School is committed to delivering top-quality education by providing modern
           resources and opportunities typically found in urban areas, all within our rural community.
           Our goal is to nurture individual talents, foster character development, and create a

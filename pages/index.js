@@ -31,11 +31,10 @@ export default function Home() {
         <ImageCarousel />
       </section>
         <main className="main-style mx-0 p-0">
-
-            {/* <section id="ourmission" className="section mb-8">
-                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Our Mission</h1>
+            <section id="ourmission" className="section mb-8 mt-8">
+                <h1 className="mission-heading text-3xl md:text-4xl font-cursive font-bold text-center">Our Mission</h1>
                 <Mission />
-            </section> */}
+            </section>
 
             {/* <section id="gallery" className="section mb-8">
                 <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Gallery</h1>
