@@ -1,6 +1,6 @@
-// components/ImageCarousel.js
 import React, { useEffect, useState } from 'react';
 import Carousel from './Carousel';
+// import './globals.css';
 
 const ImageCarousel = () => {
   const [imageFilenames, setImageFilenames] = useState([]);

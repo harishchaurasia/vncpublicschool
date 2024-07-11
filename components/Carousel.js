@@ -1,4 +1,3 @@
-// components/Carousel.js
 import React, { useState, useEffect } from 'react';
 
 const Carousel = ({ children, interval = 3000 }) => {

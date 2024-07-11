@@ -1,39 +1,71 @@
-/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+
+/* Add these styles to ensure the main section and other parts have correct height and layout */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.main-style {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+
+/* NAV-BAR */
+.nav-link {
+  color: black;
+  font-size: 18px;
+  font-family: 'New Rocker', cursive;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 1px 0;
+  cursor: pointer;
+}
 
 /* FOR NEWS TICKER */
 @keyframes ticker {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(100%);
   }
-  
-  .tickerContent {
-    display: inline-block;
-    padding-left: 100%;
-    white-space: nowrap;
-    animation: ticker 15s linear infinite;
+  100% {
+    transform: translateX(-100%);
   }
+}
+
+.animate-ticker {
+  animation: ticker 10s linear infinite;
+}
 
   
 /* FOR IMAGE CAROUSEL */
-
-.relative{
+.relative {
   /* background-color: '#D6F1DF'; */
   background-color: #edfff3;
 }
-
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 100%; /* Ensure it adjusts to the screen width */
   margin: auto;
   perspective: 1000px;
-  padding: 20px; /* Add padding to the container */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .carousel-slides {
@@ -43,8 +75,20 @@
   position: relative;
   width: 100%;
   height: 400px;
-  padding: 10px; /* Add padding around the slides */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.carousel-slide {
+  position: absolute;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  width: 100%; /* Make sure each slide takes full width of the container */
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 0; /* Remove margin between slides */
 }
 
 .carousel-slide {
@@ -125,3 +169,34 @@
 .carousel-marker.active {
   background-color: rgba(0, 0, 0, 0.9);
 }
+
+
+
+
+.container {
+  padding: 20px;
+}
+.desk-card {
+  display: flex;
+  margin: 10px;
+}
+.mission-heading {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'New Rocker', cursive;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main-style {
+  padding: 250px;
+  background: linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%);
+  background: #D6F1DF;
+  min-height: calc(100vh - 120px);
+  margin-bottom: 50px;
+}
+.line-style {
+  border: none;
+  border-top: 2px solid #64B6AC;
+  margin: 10px 0;
+}
+

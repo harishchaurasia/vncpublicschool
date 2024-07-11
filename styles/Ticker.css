@@ -11,7 +11,7 @@
 .tickerContent {
   display: inline-block;
   padding-left: 100%;
-  color: red;
+  color: rgb(145, 0, 0);
   white-space: nowrap;
-  animation: ticker 1s linear infinite;
+  animation: ticker 10s linear infinite;
 }

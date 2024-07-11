@@ -3,103 +3,34 @@ import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa'
 import VisitCounter from '../components/VisitCounter';
 
 const Footer = () => {
-    return (
-        <footer style={footerStyle}>
-            <div style={footerContentStyle}>
-                <div style={logoSectionStyle}>
-                    <img src="/logo.png" alt="School Logo" style={logoStyle} />
-                    <p style={schoolNameStyle}>VNC Public School</p>
-                </div>
-                <div style={contactSectionStyle}>
-                    <p style={contactTextStyle}>Address: Gajpur Bazaar Rd, Gajpur, Gorakhpur,</p>
-                    <p style={contactTextStyle}>Uttar Pradesh, 273413, India.</p>
-                    <p style={contactTextStyle}>Email: vncpublicgajpur@gmail.com</p>
-                    <p style={contactTextStyle}>Phone: +917054858403</p>
-                    <a href="https://wa.me/917054858403" target='_blank' style={iconStyle}><FaWhatsapp /></a>
-                    <a href="https://www.instagram.com/vncpublicschool/" target='_blank' style={iconStyle}><FaInstagram /></a>
-                    <a href="https://www.facebook.com/vncpublicschool/" target='_blank' style={iconStyle}><FaFacebook /></a>
-                    <a href="https://www.linkedin.com/company/vnc-public-school/" target='_blank' style={iconStyle}><FaLinkedin /></a>
-                </div>
-                <div style={socialMediaSectionStyle}>
-                <VisitCounter />
-                </div>
-            </div>
-            <div style={copyrightStyle}>
-                <p>Copyright © 2024 VNC Public School. All Rights Reserved. </p>
-            </div>
-        </footer>
-    );
-};
-
-
-const socialMediaSectionStyle = {
-    position: 'absolute',
-    bottom: '0px',
-    right: '75px',
-    fontSize: '16px',
-    color: '#000',
-};
-
-
-
-const footerStyle = {
-    background: '#64B6AC',
-    textAlign: 'center',
-    padding: '05px 10px',
-    width: '100%',
-    position: 'absolute',
-    bottom: '0px',
-};
-
-const footerContentStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-    maxWidth: '1800px',
-    margin: '0px 15px',
-};
-
-const logoSectionStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    marginRight: '150px',
-    marginTop:'40px'
-};
-
-const logoStyle = {
-    width: '140px',
-    height: '160px',
-    marginRight: '10px',
-};
-
-const schoolNameStyle = {
-    fontSize: '55px',
-    fontFamily: 'New Rocker, cursive',
-    textTransform: 'capitalize',
-};
-
-const contactSectionStyle = {
-    textAlign: 'left',
-    marginBottom: '0px',
-    marginLeft: '550px',
-};
-
-const contactTextStyle = {
-    margin: '8px 5px',
-    fontSize: '18px',
-};
-
-const iconStyle = {
-    margin: '0 10px',
-    color: '#000',
-    fontSize: '28px',
-    textDecoration: 'none',
-};
-
-const copyrightStyle = {
-    marginBottom: '0px',
-    fontSize: '16px',
+  return (
+    <footer className="bg-[#64B6AC] text-center p-2 w-full relative bottom-0">
+      <div className="flex flex-col md:flex-row justify-between items-center flex-wrap max-w-screen-xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center md:mr-36 mt-4 md:mt-10">
+          <img src="/logo.png" alt="School Logo" className="w-36 h-40 md:mr-2.5 mb-4 md:mb-0" />
+          <p className="text-3xl md:text-5xl font-cursive capitalize">VNC Public School</p>
+        </div>
+        <div className="text-left mb-4 md:mb-0 md:ml-36">
+          <p className="my-2 text-base md:text-lg">Address: Gajpur Bazaar Rd, Gajpur, Gorakhpur,</p>
+          <p className="my-2 text-base md:text-lg">Uttar Pradesh, 273413, India.</p>
+          <p className="my-2 text-base md:text-lg">Email: vncpublicgajpur@gmail.com</p>
+          <p className="my-2 text-base md:text-lg">Phone: +917054858403</p>
+          <div className="flex space-x-4 mt-2">
+            <a href="https://wa.me/917054858403" target='_blank' className="text-black text-2xl"><FaWhatsapp /></a>
+            <a href="https://www.instagram.com/vncpublicschool/" target='_blank' className="text-black text-2xl"><FaInstagram /></a>
+            <a href="https://www.facebook.com/vncpublicschool/" target='_blank' className="text-black text-2xl"><FaFacebook /></a>
+            <a href="https://www.linkedin.com/company/vnc-public-school/" target='_blank' className="text-black text-2xl"><FaLinkedin /></a>
+          </div>
+        </div>
+        <div className="mt-4 md:mt-0 md:relative md:bottom-0 md:right-20 text-base md:text-lg text-black">
+          <VisitCounter />
+        </div>
+      </div>
+      <div className="mt-4 md:mt-2 text-sm md:text-lg">
+        <p>Copyright © 2024 VNC Public School. All Rights Reserved.</p>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

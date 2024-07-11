@@ -3,114 +3,48 @@ import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaWhatsapp
 
 const Header = () => {
     return (
-        <header style={headerStyle}>
-            <div style={topRowStyle}>
-                <div style={contactStyle}>
-                    <p>  <FaPhoneAlt style={{ marginRight: '0px', color: '#000', verticalAlign: 'middle' }} /> +91 7054858403  |</p>
-                    <p> <FaEnvelope style={{ marginRight: '5px', color: '#000', verticalAlign: 'middle' }} /> vncpublicgajpur@gmail.com </p>
+        <header className="bg-[#d1eeda] p-2 relative">
+            <div className="flex flex-col md:flex-row justify-between items-center px-5">
+                <div className="flex flex-col md:flex-row items-center text-lg font-bold space-x-0 md:space-x-4">
+                    <div className="flex items-center space-x-1 mb-1 md:mb-0">
+                        <FaPhoneAlt className="text-black" />
+                        <p className="m-0">+91 7054858403 |</p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                        <FaEnvelope className="text-black" />
+                        <p className="m-0">vncpublicgajpur@gmail.com</p>
+                    </div>
                 </div>
-                <div style={socialIconsStyle}>
-                    <a href='https://wa.me/917054858403' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
-                        <FaWhatsapp style={iconStyle} />
+                <div className="flex space-x-3 md:space-x-5 mt-2 md:mt-0">
+                    <a href='https://wa.me/917054858403' target='_blank' rel='noopener noreferrer'>
+                        <FaWhatsapp className="w-6 h-6 md:w-7 md:h-7 text-black" />
                     </a>
-                    <a href='mailto:vncpublicgajpur@gmail.com' target='_blank' style={{ textDecoration: 'none' }}>
-                        <FaEnvelope style={iconStyle} />
+                    <a href='mailto:vncpublicgajpur@gmail.com' target='_blank'>
+                        <FaEnvelope className="w-6 h-6 md:w-7 md:h-7 text-black" />
                     </a>
-                    <a href='https://www.facebook.com/vncpublicschool/' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
-                        <FaFacebook style={iconStyle} />
+                    <a href='https://www.facebook.com/vncpublicschool/' target='_blank' rel='noopener noreferrer'>
+                        <FaFacebook className="w-6 h-6 md:w-7 md:h-7 text-black" />
                     </a>
-                    <a href='https://www.instagram.com/vncpublicschool/' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
-                        <FaInstagram style={iconStyle} />
+                    <a href='https://www.instagram.com/vncpublicschool/' target='_blank' rel='noopener noreferrer'>
+                        <FaInstagram className="w-6 h-6 md:w-7 md:h-7 text-black" />
                     </a>
-                    <a href='https://www.linkedin.com/company/vnc-public-school/' target='_blank' rel='noopener noreferrer' style={{ textDecoration: 'none' }}>
-                        <FaLinkedin style={iconStyle} />
+                    <a href='https://www.linkedin.com/company/vnc-public-school/' target='_blank' rel='noopener noreferrer'>
+                        <FaLinkedin className="w-6 h-6 md:w-7 md:h-7 text-black" />
                     </a>
                 </div>
             </div>
-            <hr style={lineStyle} />
-            <div style={contentStyle}>
-                {/* <img style={logoStyle} src="/logo.png" alt="School Logo" /> */}
+            <hr className="border-t-2 border-[#64B6AC] my-2" />
+            <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
                 <a href="https://www.vncpublicschool.com" rel="noopener noreferrer">
-                <img style={logoStyle} src="/logo.png" alt="School Logo" />
+                    <img className="w-20 h-24 md:w-28 md:h-32 mx-auto md:mx-0" src="/logo.png" alt="School Logo" />
                 </a>
-                <div style={infoStyle}>
-                    <h1 style={titleStyle}>VNC Public School</h1>
-                    <p style={sloganStyle}>Empowering young minds for a brighter future</p>
+                <div className="ml-0 md:ml-5 mt-2 md:mt-0">
+                    <h1 className="text-3xl md:text-6xl font-cursive capitalize mb-2">VNC Public School</h1>
+                    <p className="text-lg md:text-xl font-cursive capitalize ml-0 md:ml-11">Empowering young minds for a brighter future</p>
                 </div>
             </div>
         </header>
     );
-};
-
-const headerStyle = {
-    // background: 'white',
-    background: '#d1eeda',
-    padding: '10px 0px',
-    position: 'relative',
-};
-
-const topRowStyle = {
-    display: 'flex', 
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '0px 20px',
-};
-
-const contactStyle = {
-    display: 'flex',
-    alignItems: 'center', // Center vertically
-    fontSize: '20px',
-    fontWeight: 'bold',
-    gap: '8px', // Adds space between phone and email sections
-  };
-
-const socialIconsStyle = {
-    display: 'flex',
-    gap: '20px',
-};
-
-const iconStyle = {
-    width: '30px',
-    height: '30px',
-    color: '#000000',
-};
-
-const lineStyle = {
-    border: 'none',
-    borderTop: '2px solid #64B6AC',
-    margin: '10px 0',
-};
-
-const contentStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-};
-
-const logoStyle = {
-    width: '115px',
-    height: '132px',
-    borderRadius: '45px',
-};
-
-const infoStyle = {
-    marginLeft: '20px',
-};
-
-const titleStyle = {
-    margin: 0,
-    fontSize: '75px',
-    fontFamily: 'New Rocker, cursive',
-    textTransform: 'capitalize',
-    marginBottom: '8px',
-};
-
-const sloganStyle = {
-    margin: '02px',
-    fontSize: '23px',
-    fontFamily: 'New Rocker, cursive',
-    textTransform: 'capitalize',
-    marginLeft: '70px',
 };
 
 export default Header;

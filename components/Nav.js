@@ -1,41 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Nav = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <nav style={navStyle}>
-            <ScrollLink to="home" smooth={true} duration={500} style={linkStyle}>Home</ScrollLink>
-            <ScrollLink to="ourmission" smooth={true} duration={500} style={linkStyle}>Our Mission</ScrollLink>
-            <ScrollLink to="gallery" smooth={true} duration={500} style={linkStyle}>Gallery</ScrollLink>
-            <ScrollLink to="about" smooth={true} duration={500} style={linkStyle}>About</ScrollLink>
-            <ScrollLink to="links" smooth={true} duration={500} style={linkStyle}>Important Links</ScrollLink>
-            <ScrollLink to="contactus" smooth={true} duration={500} style={linkStyle}>Contact Us</ScrollLink>
-        </nav>
+        <div>
+            <nav className="bg-[#64B6AC] p-2 flex justify-between items-center md:justify-center">
+                <div className="text-2xl md:hidden cursor-pointer" onClick={toggleMenu}>
+                    {isOpen ? <FaTimes /> : <FaBars />}
+                </div>
+                <div className="hidden md:flex space-x-5">
+                    <ScrollLink to="home" smooth={true} duration={500} className="nav-link">Home</ScrollLink>
+                    <ScrollLink to="ourmission" smooth={true} duration={500} className="nav-link">Our Mission</ScrollLink>
+                    <ScrollLink to="gallery" smooth={true} duration={500} className="nav-link">Gallery</ScrollLink>
+                    <ScrollLink to="about" smooth={true} duration={500} className="nav-link">About</ScrollLink>
+                    <ScrollLink to="links" smooth={true} duration={500} className="nav-link">Important Links</ScrollLink>
+                    <ScrollLink to="contactus" smooth={true} duration={500} className="nav-link">Contact Us</ScrollLink>
+                </div>
+            </nav>
+            <div className={`fixed inset-0 bg-[#64B6AC] transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:hidden overflow-hidden`}>
+                <div className="flex justify-between items-center p-5 absolute top-0 left-0 right-0">
+                    <h2 className="text-2xl text-white">Menu</h2>
+                    <div className="text-2xl cursor-pointer" onClick={toggleMenu}>
+                        <FaTimes />
+                    </div>
+                </div>
+                <div className="flex flex-col items-start space-y-2 p-5 mt-12">
+                    <ScrollLink to="home" smooth={true} duration={500} className="nav-link text-white" onClick={toggleMenu}>Home</ScrollLink>
+                    <ScrollLink to="ourmission" smooth={true} duration={500} className="nav-link text-white" onClick={toggleMenu}>Our Mission</ScrollLink>
+                    <ScrollLink to="gallery" smooth={true} duration={500} className="nav-link text-white" onClick={toggleMenu}>Gallery</ScrollLink>
+                    <ScrollLink to="about" smooth={true} duration={500} className="nav-link text-white" onClick={toggleMenu}>About</ScrollLink>
+                    <ScrollLink to="links" smooth={true} duration={500} className="nav-link text-white" onClick={toggleMenu}>Important Links</ScrollLink>
+                    <ScrollLink to="contactus" smooth={true} duration={500} className="nav-link text-white" onClick={toggleMenu}>Contact Us</ScrollLink>
+                </div>
+            </div>
+        </div>
     );
-};
-
-const navStyle = {
-    background: '#64B6AC',
-    display: 'flex',
-    justifyContent: 'center',
-    padding: '20px 0',
-};
-
-const linkStyle = {
-    color: 'black',
-    fontSize: '18px',
-    fontFamily: 'New Rocker, cursive',
-    textTransform: 'capitalize',
-    textDecoration: 'none',
-    margin: '0 32px',
-    cursor: 'pointer',
-};
-
-const buttonStyle = {
-    padding: '10px 20px',
-    backgroundColor: '#007BFF',
-    borderRadius: '5px',
-    color: '#fff',
 };
 
 export default Nav;
