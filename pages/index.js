@@ -30,46 +30,51 @@ export default function Home() {
       <section id="carousel">
         <ImageCarousel />
       </section>
-      <main className="main-style">
-        <section id="ourmission" className="section">
-          <h1 className="mission-heading">Our Mission</h1>
-          <Mission />
-        </section>
-        <section id="gallery" className="section">
-          <h1 className="mission-heading">Gallery</h1>
-          <Gallery />
-        </section>
-        <section id="about" className="section">
-          <h1 className="mission-heading">About</h1>
-          <div className="desk-card flex-wrap justify-center gap-4">
-            <DeskCard
-              image="./principal.png"
-              name="John Doe"
-              position="Principal"
-              message="Welcome to our school. We are dedicated to providing the best education for our students."
-            />
-            <DeskCard
-              image="./principal.png"
-              name="John Doe"
-              position="Principal"
-              message="Welcome to our school. We are dedicated to providing the best education for our students."
-            />
-            <DeskCard
-              image="./principal.png"
-              name="John Doe"
-              position="Principal"
-              message="Welcome to our school. We are dedicated to providing the best education for our students."
-            />
-          </div>
-        </section>
-        <section id="links" className="section">
-          <Links />
-        </section>
-        <section id="contactus" className="section">
-          <h1 className="mission-heading">Connect With Us</h1>
-          <Contact />
-        </section>
-      </main>
+        <main className="main-style mx-0 p-0">
+
+            {/* <section id="ourmission" className="section mb-8">
+                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Our Mission</h1>
+                <Mission />
+            </section> */}
+
+            {/* <section id="gallery" className="section mb-8">
+                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Gallery</h1>
+                <Gallery />
+            </section> */}
+
+            {/* <section id="about" className="section mb-8">
+                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">About</h1>
+                <div className="desk-card flex flex-wrap justify-center gap-4">
+                    <DeskCard
+                        image="./principal.png"
+                        name="John Doe"
+                        position="Principal"
+                        message="Welcome to our school. We are dedicated to providing the best education for our students."
+                    />
+                    <DeskCard
+                        image="./principal.png"
+                        name="John Doe"
+                        position="Principal"
+                        message="Welcome to our school. We are dedicated to providing the best education for our students."
+                    />
+                    <DeskCard
+                        image="./principal.png"
+                        name="John Doe"
+                        position="Principal"
+                        message="Welcome to our school. We are dedicated to providing the best education for our students."
+                    />
+                </div>
+            </section> */}
+
+            {/* <section id="links" className="section mb-8">
+                <Links />
+            </section> */}
+
+            {/* <section id="contactus" className="section mb-8">
+                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Connect With Us</h1>
+                <Contact />
+            </section> */}
+        </main>
       <Footer />
       <ScrollToTopButton />
     </div>

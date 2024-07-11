@@ -1,21 +1,19 @@
 import React from 'react';
-import { AlignCenter } from 'react-feather';
 import ContactCard from './ContactCard';
-// import { Phone, Smartphone } from '@material-ui/icons';
-import { Phone, Smartphone } from 'react-feather';
 
 const ContactUs = () => {
     return (
-        <div style={containerStyle}>
-            <div style={contactInfoStyle}>
-                <h2>Contact Information</h2>
-                <p>VNC Public School</p>
-                <p>Gajpur Bazaar Road, Kauriram</p>
-                <p>Gorakhpur, Uttar Pradesh, 273413. </p>
-                <p>Phone: +917054858403</p>
-                <p>Email: vncpublicgajpur@gmail.com</p>
-            </div>
-                <div style={contactDivStyle}>
+        <div className="max-w-3xl mx-auto p-4">
+           <div className="text-center mb-12">
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-tight">VNC Public School</p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-tight">Gajpur Bazaar Road, Kauriram</p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-tight">Gorakhpur, Uttar Pradesh, 273413.</p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-tight">Phone: +917054858403</p>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-tight">Email: vncpublicgajpur@gmail.com</p>
+                </div>
+
+
+            <div className="flex flex-col md:flex-row md:justify-center gap-4">
                 <ContactCard 
                     officeName="Principal's Office" 
                     phone="+917054858403" 
@@ -28,34 +26,7 @@ const ContactUs = () => {
                 />
             </div>
         </div>
-    )
+    );
 };
 
 export default ContactUs;
-
-
-const contactDivStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    padding: '20px',
-    margin: '0 20px',
-};
-
-const containerStyle = {
-    maxWidth: '800px',
-    margin: '0 auto',
-    padding: '20px',
-};
-
-const MissionHeading = {
-    textAlign: 'center',
-    fontSize: '45px',
-    fontFamily: 'New Rocker, cursive',
-    marginBottom: '40px',
-};
-
-const contactInfoStyle = {
-    textAlign: 'center',
-    marginBottom: '45px',
-    fontSize:'20px'
-};

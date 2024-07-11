@@ -26,6 +26,41 @@ body, html {
 }
 
 
+/* MAIN SECTION */
+.main-style {
+  padding: 10px;
+  background: linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%);
+  background: #D6F1DF;
+  min-height: calc(100vh - 120px);
+  margin-bottom: 10px;
+}
+
+/* .container {
+  padding: 20px;
+}
+.desk-card {
+  display: flex;
+  margin: 10px;
+}
+
+.mission-heading {
+  text-align: center;
+  font-size: 45px;
+  font-family: 'New Rocker', cursive;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.line-style {
+  border: none;
+  border-top: 2px solid #64B6AC;
+  margin: 10px 0;
+} */
+
+
+
+
 /* NAV-BAR */
 .nav-link {
   color: black;
@@ -170,33 +205,92 @@ body, html {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Contact Card */
 
-
-
-.container {
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
 }
-.desk-card {
-  display: flex;
-  margin: 10px;
-}
-.mission-heading {
+
+.contact-info {
   text-align: center;
-  font-size: 45px;
-  font-family: 'New Rocker', cursive;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 45px;
+  font-size: 20px;
 }
-.main-style {
-  padding: 250px;
-  background: linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%);
-  background: #D6F1DF;
-  min-height: calc(100vh - 120px);
-  margin-bottom: 50px;
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure the cards wrap on smaller screens */
 }
-.line-style {
-  border: none;
-  border-top: 2px solid #64B6AC;
-  margin: 10px 0;
+
+.contact-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  background-color: #edfff3;
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
+  max-width: calc(100% - 40px); /* Adjust max-width to consider margin */
+  min-width: 280px; /* Set a minimum width for the cards */
+  box-sizing: border-box;
 }
+
+.office-name {
+  font-size: 20px;
+  font-family: 'Arial, sans-serif';
+  margin-top: 8px; 
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.call-button, .whatsapp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Arial, sans-serif';
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 300px; /* Optional: limit the max width of buttons */
+}
+
+.call-button {
+  background-color: #353935;
+}
+
+.whatsapp-button {
+  background-color: #64B6AC;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+@media (max-width: 590px) {
+  .contact-cards {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center; /* Center align the cards */
+  }
+
+  .contact-card {
+      max-width: 100%; /* Ensure it takes the full width available */
+      min-width: unset; /* Reset min-width for small screens */
+  }
+}
+
 

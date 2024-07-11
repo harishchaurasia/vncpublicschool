@@ -11,11 +11,11 @@ const Nav = () => {
 
     return (
         <div>
-            <nav className="bg-[#64B6AC] p-2 flex justify-between items-center md:justify-center">
+            <nav className="bg-[#64B6AC] p-5 flex justify-between items-center md:justify-center">
                 <div className="text-2xl md:hidden cursor-pointer" onClick={toggleMenu}>
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </div>
-                <div className="hidden md:flex space-x-5">
+                <div className="hidden md:flex space-x-8">
                     <ScrollLink to="home" smooth={true} duration={500} className="nav-link">Home</ScrollLink>
                     <ScrollLink to="ourmission" smooth={true} duration={500} className="nav-link">Our Mission</ScrollLink>
                     <ScrollLink to="gallery" smooth={true} duration={500} className="nav-link">Gallery</ScrollLink>
