@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 import VisitCounter from '../components/VisitCounter';
+import ScrollToTopButton from '../components/ScrollToTop';
 
 const Footer = () => {
   return (
@@ -29,6 +30,7 @@ const Footer = () => {
       <div className="w-full mt-4 md:mt-8 text-sm md:text-base text-center">
         <p>Copyright © 2024 VNC Public School. All Rights Reserved.</p>
       </div>
+      <ScrollToTopButton />
     </footer>
   );
 };

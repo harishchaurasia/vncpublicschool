@@ -29,37 +29,11 @@ body, html {
 /* MAIN SECTION */
 .main-style {
   padding: 10px;
-  /* background: linear-gradient(116deg, #DCF3F3 0%, #D6F1DF 100%); */
-  /* background: #D6F1DF; */
   background: #edfff3;
   min-height: calc(100vh - 120px);
   margin-bottom: 10px;
   margin-top: 10px;
 }
-
-/* .container {
-  padding: 20px;
-}
-.desk-card {
-  display: flex;
-  margin: 10px;
-}
-
-.mission-heading {
-  text-align: center;
-  font-size: 45px;
-  font-family: 'New Rocker', cursive;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
-.line-style {
-  border: none;
-  border-top: 2px solid #64B6AC;
-  margin: 10px 0;
-} */
-
 
 
 
@@ -91,18 +65,17 @@ body, html {
   
 /* FOR IMAGE CAROUSEL */
 .relative {
-  /* background-color: '#D6F1DF'; */
   background-color: #edfff3;
 }
+
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 100%; /* Ensure it adjusts to the screen width */
+  max-width: 1280px;
   margin: auto;
   perspective: 1000px;
   padding: 20px;
-  box-sizing: border-box;
-  overflow: hidden; /* Prevent overflow */
+  box-sizing: border-box; 
 }
 
 .carousel-slides {
@@ -119,25 +92,13 @@ body, html {
 .carousel-slide {
   position: absolute;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  width: 100%; /* Make sure each slide takes full width of the container */
-  height: 100%;
-  opacity: 0;
-  transform: scale(0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin: 0; /* Remove margin between slides */
-}
-
-.carousel-slide {
-  position: absolute;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   width: 60%;
   height: 100%;
   opacity: 0;
   transform: scale(0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  margin: 0 10px; /* Add margin between slides */
+  margin: 0 10px; 
 }
 
 .carousel-slide img {
@@ -145,8 +106,8 @@ body, html {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  padding: 10px; /* Add padding inside each slide */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  padding: 10px; 
+  box-sizing: border-box; 
 }
 
 .carousel-slide.active {
@@ -169,22 +130,22 @@ body, html {
 
 .carousel-button {
   position: absolute;
-  top: 88%;
-  transform: translateY(50%);
-  background-color: rgba(0, 0, 0, 0.0001);
-  color: Red;
-  /* border: solid; */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 2;
 }
 
 .carousel-button.prev {
-  left:150px;
+  left: 10px;
 }
 
 .carousel-button.next {
-  right: 150px;
+  right: 10px;
 }
 
 .carousel-markers {
@@ -206,6 +167,7 @@ body, html {
 .carousel-marker.active {
   background-color: rgba(0, 0, 0, 0.9);
 }
+
 
 /* Contact Card */
 
@@ -236,9 +198,9 @@ body, html {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   text-align: center;
   background-color: #edfff3;
-  flex: 1 1 300px; /* Flex-grow, flex-shrink, and flex-basis */
-  max-width: calc(100% - 40px); /* Adjust max-width to consider margin */
-  min-width: 280px; /* Set a minimum width for the cards */
+  flex: 1 1 300px;
+  max-width: calc(100% - 40px); 
+  min-width: 280px;
   box-sizing: border-box;
 }
 

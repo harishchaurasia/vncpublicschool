@@ -1,81 +1,19 @@
-
 import React from 'react';
 import { Phone, Smartphone } from 'react-feather';
 
 const LinksPage = () => {
   return (
-    <div>
-    <h1 style={MissionHeading}>
-        Important Links 
-    </h1>
-    <div style={containerStyle}>
-      <div style={sectionStyle}>
-        <h1 style={admissionHead}>Admissions Open</h1>
-        <a href="/apply" style={buttonStyle}>Apply Now</a>
+    <div className=" flex items-center justify-center p-5">
+      <div className="bg-green-100 shadow-lg rounded-lg p-8 max-w-md mx-auto border-2 border-gray-200">
+        <div className="flex flex-col items-center">
+          <div className="mb-2 text-center">
+            <h2 className="text-xl font-semibold mb-10">Admissions Open</h2>
+            <a href="/apply" className="px-6 py-3 text-lg text-white bg-red-500 rounded-lg hover:bg-green-700 transition duration-300">Apply Now</a>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 };
 
 export default LinksPage;
-
-
-const MissionHeading = {
-    textAlign: 'center',
-    fontSize: '45px',
-    fontFamily: 'New Rocker, cursive'
-  };
-  
-const containerStyle = {
-  maxWidth: '800px',
-  margin: '0 auto',
-  padding: '20px',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
-
-const sectionStyle = {
-  marginBottom: '40px',
-  textAlign: 'center',
-};
-
-const admissionHead = {
-  fontSize: '22px',
-  // fontFamily: 'New Rocker, cursive',
-  marginBottom: '20px',
-};
-
-const buttonStyle = {
-  padding: '10px 20px',
-  fontSize: '18px',
-  color: '#fff',
-  backgroundColor: '#007BFF',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
-  textDecoration: 'none',
-};
-
-const subheadingStyle = {
-  fontSize: '28px',
-  fontFamily: 'Roboto, sans-serif',
-  marginBottom: '20px',
-};
-
-const contactItemStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  marginBottom: '10px',
-};
-
-const iconStyle = {
-  marginRight: '10px',
-};
-
-const linkStyle = {
-  fontSize: '18px',
-  color: '#007BFF',
-  textDecoration: 'none',
-};

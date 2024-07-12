@@ -16,7 +16,7 @@ export default function Home() {
   const [notice, setNotice] = useState('Admissions Open for 2024-25 Session!');
 
   return (
-    <div className="min-h-screen relative pb-24">
+    <div className="min-h-screen relative">
       <section id="home">
         <Head>
           <title>VNC Public School</title>
@@ -43,7 +43,23 @@ export default function Home() {
 
             <section id="about" className="section mb-8">
                 <h1 className=" font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">About</h1>
+                <div className="text-center px-8">
+                  <p className="font-serif text-sm sm:text-base md:text-lg lg:text-xl font-normal my-4 mx-2 leading-relaxed">
+                  Our school is dedicated to providing high-quality education with a mission to uplift rural India. We offer 
+                  a comprehensive curriculum, state-of-the-art facilities, and focus on holistic development, ensuring students 
+                  excel academically and grow into well-rounded individuals. Our aim is to broaden their horizons and show them 
+                  the vast opportunities available in the world. Committed to bridging the educational gap, we empower students 
+                  with the knowledge and skills needed to thrive in a rapidly changing world. Let's meet the management team 
+                  and listen to their vision.
+                  </p>
+                </div>
                 <div className="desk-card flex flex-wrap justify-center gap-4">
+                    <DeskCard
+                        image="./principal.png"
+                        name="Devi Devi"
+                        position="Principal"
+                        message="Welcome to our school. We are dedicated to providing the best education for our students."
+                    />
                     <DeskCard
                         image="./principal.png"
                         name="Bharath Chaurasia"
@@ -56,26 +72,20 @@ export default function Home() {
                         position="Chairman"
                         message="Welcome to our school. We are dedicated to providing the best education for our students."
                     />
-                    <DeskCard
-                        image="./principal.png"
-                        name=""
-                        position="Principal"
-                        message="Welcome to our school. We are dedicated to providing the best education for our students."
-                    />
                 </div>
             </section>
 
-            {/* <section id="links" className="section mb-8">
+            <section id="links" className="section mb-8">
+            <h1 className="font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Important Links</h1>
                 <Links />
-            </section> */}
+            </section>
 
-            {/* <section id="contactus" className="section mb-8">
-                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Connect With Us</h1>
+            <section id="contactus" className="section mb-8">
+                <h1 className="font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Connect With Us</h1>
                 <Contact />
-            </section> */}
+            </section>
         </main>
       <Footer />
-      <ScrollToTopButton />
     </div>
   );
 }
