@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const filePath = path.join(process.cwd(), 'visit-count.txt');
+const filePath = path.join(process.cwd(), './components/visit-count.txt');
 
 export default async (req, res) => {
   try {
