@@ -98,9 +98,9 @@ export default function Home() {
                 <h1 className="font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Connect With Us</h1>
                 <Contact />
             </section>
+            <Analytics/>
         </main>
       <Footer />
-      <Analytics/>
     </div>
   );
 }
