@@ -55,7 +55,7 @@ export default function Home() {
                 </div>
                 <div className="desk-card flex flex-wrap justify-center gap-4">
                     <DeskCard
-                        image="./director.png"
+                        image="./director.jpg"
                         name="Bharath Chaurasia"
                         position="Director"
                         message="Our vision is to offer a solid foundation for a child’s educational journey. We are committed 

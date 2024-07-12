@@ -15,13 +15,13 @@ const ContactUs = () => {
       <div className="flex flex-col items-center md:flex-row md:justify-center gap-4">
         <ContactCard 
           officeName="Principal's Office" 
-          phone="+917054858403" 
+          phone="+91 7054858403" 
           whatsapp="917054858403" 
         />
         <ContactCard 
           officeName="Fee Office" 
-          phone="+91234567891" 
-          whatsapp="0987654321" 
+          phone="+91 9044864413" 
+          whatsapp="919044864413" 
         />
       </div>
     </div>
