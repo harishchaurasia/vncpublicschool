@@ -36,34 +36,34 @@ export default function Home() {
                 <Mission />
             </section>
 
-            {/* <section id="gallery" className="section mb-8">
-                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Gallery</h1>
+            <section id="gallery" className="section mb-8">
+                <h1 className="font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Gallery</h1>
                 <Gallery />
-            </section> */}
+            </section>
 
-            {/* <section id="about" className="section mb-8">
-                <h1 className="mission-heading text-3xl md:text-4xl font-bold text-center mb-6">About</h1>
+            <section id="about" className="section mb-8">
+                <h1 className=" font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">About</h1>
                 <div className="desk-card flex flex-wrap justify-center gap-4">
                     <DeskCard
                         image="./principal.png"
-                        name="John Doe"
-                        position="Principal"
+                        name="Bharath Chaurasia"
+                        position="Director"
                         message="Welcome to our school. We are dedicated to providing the best education for our students."
                     />
                     <DeskCard
                         image="./principal.png"
-                        name="John Doe"
-                        position="Principal"
+                        name="Shatrudhan Chaurasia"
+                        position="Chairman"
                         message="Welcome to our school. We are dedicated to providing the best education for our students."
                     />
                     <DeskCard
                         image="./principal.png"
-                        name="John Doe"
+                        name=""
                         position="Principal"
                         message="Welcome to our school. We are dedicated to providing the best education for our students."
                     />
                 </div>
-            </section> */}
+            </section>
 
             {/* <section id="links" className="section mb-8">
                 <Links />

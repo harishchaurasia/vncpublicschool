@@ -11,10 +11,10 @@ const Gallery = () => {
 
   return (
     <div>
-      <div style={galleryContainerStyle}>
+      <div className="flex flex-wrap justify-center p-5">
         {images.map((image, index) => (
-          <div key={index} style={galleryItemStyle}>
-            <img src={`/gallery/${image}`} alt={`Gallery Image ${index + 1}`} style={galleryImageStyle} />
+          <div key={index} className="m-2 rounded-lg overflow-hidden shadow-lg w-96 bg-white relative">
+            <img src={`/gallery/${image}`} alt={`Gallery Image ${index + 1}`} className="w-full h-auto block" />
           </div>
         ))}
       </div>
@@ -23,26 +23,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-
-const galleryContainerStyle = {
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-  padding: '20px',
-};
-
-const galleryItemStyle = {
-  margin: '10px',
-  borderRadius: '8px',
-  overflow: 'hidden',
-  boxShadow: '2px 4px 8px rgba(0, 0, 0, 0.1)',
-  width: '425px', // Adjust width as needed
-  backgroundColor: '#fff',
-  position: 'relative', // Ensure positioning for inner content
-};
-
-const galleryImageStyle = {
-  width: '100%',
-  height: 'auto',
-  display: 'block',
-};

@@ -2,78 +2,21 @@ import React from 'react';
 
 const DeskCard = ({ image, name, position, message }) => {
   return (
-    <div style={styles.card}>
-      <div style={styles.leftSection}>
-        <div style={styles.imageWrapper}>
-          <img style={styles.image} src={image} alt={`${name}'s picture`} />
+    <div className="flex flex-col md:flex-row border border-gray-300 rounded-lg shadow-lg p-4 m-6 bg-green-100 w-full max-w-2xl">
+      <div className="flex flex-col items-center mb-4 md:mb-0 md:mr-4">
+        <div className="mb-4">
+          <img className="rounded-full w-20 h-20 md:w-24 md:h-24 object-cover" src={image} alt={`${name}'s picture`} />
         </div>
-        <div style={styles.info}>
-          <h2 style={styles.name}>{name}</h2>
-          <h3 style={styles.position}>{position}</h3>
+        <div className="text-center">
+          <h2 className="my-2 text-lg md:text-xl font-semibold">{name}</h2>
+          <h3 className="m-0 text-base md:text-lg text-gray-600 font-bold uppercase">{position}</h3>
         </div>
       </div>
-      <div style={styles.messageWrapper}>
-        <p style={styles.message}>{message}</p>
+      <div className="flex-1 flex items-center justify-center text-center md:text-left">
+        <p className="m-0 text-sm md:text-lg text-gray-800">{message}</p>
       </div>
     </div>
   );
-};
-
-const styles = {
-  card: {
-    display: 'flex',
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    padding: '10px',
-    margin: '25px',
-    backgroundColor: '#64B6AC',
-    width: '600px',
-  },
-  leftSection: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    marginRight: '16px',
-  },
-  imageWrapper: {
-    marginBottom: '16px',
-  },
-  image: {
-    borderRadius: '50%',
-    width: '80px',
-    height: '80px',
-    objectFit: 'cover',
-  },
-  info: {
-    textAlign: 'center',
-  },
-  name: {
-    margin: '8px 0',
-    fontSize: '1.2em',
-    fontFamily: 'Arial, sans-serif',
-    textTransform: 'uppercase',
-  },
-  position: {
-    margin: 0,
-    fontSize: '1em',
-    color: '#666',
-    fontFamily: 'Arial, sans-serif',
-    textTransform: 'uppercase',
-  },
-  messageWrapper: {
-    flex: 1,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  message: {
-    margin: 0,
-    fontSize: '1em',
-    color: '#333',
-    fontFamily: 'Arial, sans-serif',
-    textAlign: 'left',
-  },
 };
 
 export default DeskCard;
