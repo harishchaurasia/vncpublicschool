@@ -13,7 +13,7 @@ const DeskCard = ({ image, name, position, message }) => {
         </div>
       </div>
       <div className="flex-1 flex items-center justify-center text-center md:text-left">
-        <p className="m-0 text-sm md:text-lg text-gray-800">{message}</p>
+        <p className="mt-4 mb-4 m-5 text-xs md:text-sm text-gray-800">{message}</p>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const Nav = () => {
             </nav>
             <div className={`fixed inset-0 bg-[#64B6AC] transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:hidden overflow-hidden`}>
                 <div className="flex justify-between items-center p-5 absolute top-0 left-0 right-0">
-                    <h2 className="text-2xl text-white">Menu</h2>
+                    <h2 className="font-serif font-bold text-2xl text-white">Menu</h2>
                     <div className="text-2xl cursor-pointer" onClick={toggleMenu}>
                         <FaTimes />
                     </div>

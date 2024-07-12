@@ -58,19 +58,32 @@ export default function Home() {
                         image="./principal.png"
                         name="Devi Devi"
                         position="Principal"
-                        message="Welcome to our school. We are dedicated to providing the best education for our students."
+                        message="Welcome to VNC Public School, a temple of learning where we strive to develop competent, 
+                        cultured, and committed students. Our goal is to provide an environment that nurtures mental, physical, 
+                        emotional, and social growth. We prepare our students to face future challenges and become role models 
+                        for the next generation. Our innovative methodologies ensure that every student understands the true 
+                        meaning of education, paving their way to success in a competitive world and fostering their 
+                        development into responsible citizens."
                     />
                     <DeskCard
-                        image="./principal.png"
+                        image="./director.png"
                         name="Bharath Chaurasia"
                         position="Director"
-                        message="Welcome to our school. We are dedicated to providing the best education for our students."
+                        message="Our vision is to offer a solid foundation for a child’s educational journey. We are committed 
+                        to providing quality education and setting the highest benchmarks in the field. Our co-educational school 
+                        combines multimedia technology with a stimulating learning environment to foster holistic development 
+                        through extra-curricular activities and fun-filled learning. Our specialized curriculum prepares students 
+                        for both national and international educational opportunities, ensuring each child can thrive and excel."
                     />
                     <DeskCard
-                        image="./principal.png"
+                        image="./chairman.jpg"
                         name="Shatrudhan Chaurasia"
                         position="Chairman"
-                        message="Welcome to our school. We are dedicated to providing the best education for our students."
+                        message="We believe that every child is unique and special. Our philosophy is to nurture curiosity, 
+                        imagination, and creativity, allowing each student to learn at their own pace. By initiating a love for 
+                        knowledge, we ensure education is a joyful experience rather than a forced ritual. Our commitment is to 
+                        provide a stimulating environment that encourages every student to carve a niche for themselves in society, 
+                        fostering their growth into better citizens of our country."
                     />
                 </div>
             </section>
