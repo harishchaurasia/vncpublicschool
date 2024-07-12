@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-4 md:mt-0 text-base md:text-lg text-black">
-          <VisitCounter />
+          {/* <VisitCounter /> */}
         </div>
       </div>
       <div className="w-full mt-4 md:mt-8 text-sm md:text-base text-center">

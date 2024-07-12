@@ -11,6 +11,7 @@ import Links from '../components/Links';
 import ScrollToTopButton from '../components/ScrollToTop';
 import DeskCard from '../components/Desk';
 import { useState } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   const [notice, setNotice] = useState('Admissions Open for 2024-25 Session!');
@@ -99,6 +100,7 @@ export default function Home() {
             </section>
         </main>
       <Footer />
+      <Analytics/>
     </div>
   );
 }
