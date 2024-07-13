@@ -17,6 +17,7 @@ module.exports = {
       },
       fontFamily: {
         'cursive': ['New Rocker', 'cursive'],
+        'lora': ['Lora', 'serif'],
         'roboto': ['Roboto', 'sans-serif'],
       },
     },
