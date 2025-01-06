@@ -15,14 +15,24 @@ const Nav = () => {
                 <div className="text-2xl md:hidden cursor-pointer" onClick={toggleMenu}>
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </div>
+                // <div className="hidden md:flex space-x-8">
+                //     <ScrollLink to="home" smooth={true} duration={500} className="nav-link">Home</ScrollLink>
+                //     <ScrollLink to="ourmission" smooth={true} duration={500} className="nav-link">Our Mission</ScrollLink>
+                //     <ScrollLink to="gallery" smooth={true} duration={500} className="nav-link">Gallery</ScrollLink>
+                //     <ScrollLink to="about" smooth={true} duration={500} className="nav-link">About</ScrollLink>
+                //     <ScrollLink to="links" smooth={true} duration={500} className="nav-link">Admissions</ScrollLink>
+                //     <ScrollLink to="contactus" smooth={true} duration={500} className="nav-link">Contact Us</ScrollLink>
+                // </div>
+
                 <div className="hidden md:flex space-x-8">
                     <ScrollLink to="home" smooth={true} duration={500} className="nav-link">Home</ScrollLink>
                     <ScrollLink to="ourmission" smooth={true} duration={500} className="nav-link">Our Mission</ScrollLink>
                     <ScrollLink to="gallery" smooth={true} duration={500} className="nav-link">Gallery</ScrollLink>
                     <ScrollLink to="about" smooth={true} duration={500} className="nav-link">About</ScrollLink>
-                    <ScrollLink to="links" smooth={true} duration={500} className="nav-link">Important Links</ScrollLink>
+                    <ScrollLink to="links" smooth={true} duration={500} className="nav-link text-red-500">Admissions</ScrollLink>
                     <ScrollLink to="contactus" smooth={true} duration={500} className="nav-link">Contact Us</ScrollLink>
                 </div>
+
             </nav>
             <div className={`fixed inset-0 bg-[#64B6AC] transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:hidden overflow-hidden`}>
                 <div className="flex justify-between items-center p-5 absolute top-0 left-0 right-0">
