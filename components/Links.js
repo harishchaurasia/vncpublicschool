@@ -8,7 +8,7 @@ const LinksPage = () => {
         <div className="flex flex-col items-center">
           <div className="mb-2 text-center">
             <h2 className="text-xl font-semibold mb-10">Admissions Open</h2>
-            <a href="/apply" className="px-6 py-3 text-lg text-white bg-red-500 rounded-lg hover:bg-green-700 transition duration-300">Apply Now</a>
+            <a href="https://forms.gle/3EzaN8VdapB2rdSc6" className="px-6 py-3 text-lg text-white bg-red-500 rounded-lg hover:bg-green-700 transition duration-300">Apply Now</a>
           </div>
         </div>
       </div>
