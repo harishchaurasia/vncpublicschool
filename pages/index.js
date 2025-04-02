@@ -15,7 +15,7 @@ import { useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
-  const [notice, setNotice] = useState('Admissions Open for 2024-25 Session!');
+  const [notice, setNotice] = useState('Admissions Open for 2025-26 Session!');
 
   return (
     <div className="min-h-screen relative">
@@ -60,7 +60,8 @@ export default function Home() {
                   and listen to their vision.
                   </p>
                 </div>
-                  <DeskCard
+                <div className="desk-card flex flex-wrap justify-center gap-4">
+                <DeskCard
                         image="./principal.png"
                         name="Anubha Agnihotri"
                         position="Principal"
@@ -71,7 +72,6 @@ export default function Home() {
                         meaning of education, paving their way to success in a competitive world and fostering their 
                         development into responsible citizens."
                     />
-                <div className="desk-card flex flex-wrap justify-center gap-4">
                     <DeskCard
                         image="./director.jpg"
                         name="Bharath Chaurasia"
