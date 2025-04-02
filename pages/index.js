@@ -60,6 +60,17 @@ export default function Home() {
                   and listen to their vision.
                   </p>
                 </div>
+                  <DeskCard
+                        image="./principal.png"
+                        name="Anubha Agnihotri"
+                        position="Principal"
+                        message="Welcome to VNC Public School, a temple of learning where we strive to develop competent, 
+                        cultured, and committed students. Our goal is to provide an environment that nurtures mental, physical, 
+                        emotional, and social growth. We prepare our students to face future challenges and become role models 
+                        for the next generation. Our innovative methodologies ensure that every student understands the true 
+                        meaning of education, paving their way to success in a competitive world and fostering their 
+                        development into responsible citizens."
+                    />
                 <div className="desk-card flex flex-wrap justify-center gap-4">
                     <DeskCard
                         image="./director.jpg"
@@ -80,17 +91,6 @@ export default function Home() {
                         knowledge, we ensure education is a joyful experience rather than a forced ritual. Our commitment is to 
                         provide a stimulating environment that encourages every student to carve a niche for themselves in society, 
                         fostering their growth into better citizens of our country."
-                    />
-                    <DeskCard
-                        image="./principal.png"
-                        name="Anubha Agnihotri"
-                        position="Principal"
-                        message="Welcome to VNC Public School, a temple of learning where we strive to develop competent, 
-                        cultured, and committed students. Our goal is to provide an environment that nurtures mental, physical, 
-                        emotional, and social growth. We prepare our students to face future challenges and become role models 
-                        for the next generation. Our innovative methodologies ensure that every student understands the true 
-                        meaning of education, paving their way to success in a competitive world and fostering their 
-                        development into responsible citizens."
                     />
                 </div>
             </section>
