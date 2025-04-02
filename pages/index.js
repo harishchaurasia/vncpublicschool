@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Ticker from '../components/Ticker';
 import ImageCarousel from '../components/ImageCarousel';
 import Gallery from '../components/Gallery';
+import VideoGallery from '../components/VideoGallery';
 import Contact from '../components/Contact';
 import Links from '../components/Links';
 import ScrollToTopButton from '../components/ScrollToTop';
@@ -38,8 +39,13 @@ export default function Home() {
             </section>
 
             <section id="gallery" className="section mb-8">
-                <h1 className="font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Gallery</h1>
+                <h1 className="font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Photo Gallery</h1>
                 <Gallery />
+            </section>
+
+            <section id="videos" className="section mb-8">
+                <h1 className="font-cursive mission-heading text-3xl md:text-4xl font-bold text-center mb-6">Video Gallery</h1>
+                <VideoGallery />
             </section>
 
             <section id="about" className="section mb-8">
@@ -59,7 +65,7 @@ export default function Home() {
                         image="./director.jpg"
                         name="Bharath Chaurasia"
                         position="Director"
-                        message="Our vision is to offer a solid foundation for a child’s educational journey. We are committed 
+                        message="Our vision is to offer a solid foundation for a child's educational journey. We are committed 
                         to providing quality education and setting the highest benchmarks in the field. Our co-educational school 
                         combines multimedia technology with a stimulating learning environment to foster holistic development 
                         through extra-curricular activities and fun-filled learning. Our specialized curriculum prepares students 
