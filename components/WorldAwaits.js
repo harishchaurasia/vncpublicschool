@@ -1,91 +1,132 @@
+import Link from 'next/link';
+
 const WorldAwaits = () => (
-  <div className="relative overflow-hidden bg-gradient-to-br from-[#64B6AC] to-[#3d8f87] py-14 md:py-20 px-6">
+  <div className="relative overflow-hidden bg-[#0e3533]">
 
-    {/* Decorative background circles */}
-    <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/4" />
-    <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-white/5 translate-y-1/2 -translate-x-1/4" />
+    {/* Subtle grid */}
+    <div
+      className="absolute inset-0 opacity-[0.035]"
+      style={{
+        backgroundImage:
+          'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
+        backgroundSize: '60px 60px',
+      }}
+    />
+    {/* Amber glow top-right */}
+    <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-[#F59E0B]/10 blur-3xl pointer-events-none" />
+    {/* Teal glow bottom-left */}
+    <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-[#64B6AC]/12 blur-3xl pointer-events-none" />
 
-    <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 relative z-10">
+    <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
 
-      {/* Text */}
-      <div className="flex-1 text-white text-center md:text-left">
-        <span className="inline-block bg-[#F59E0B] text-white text-xs font-inter font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5">
-          Our Promise
-        </span>
-        <h2 className="font-display font-bold text-3xl md:text-5xl leading-tight mb-4">
-          Excellence begins here.<br />
-          <span className="text-[#FBBF24]">The world is yours.</span>
-        </h2>
-        <p className="font-inter text-white/80 text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
-          At VNC Public School, every child receives world-class education,
-          modern resources, and the mentorship to reach their fullest potential -
-          so no dream stays out of reach.
-        </p>
-        <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
-          {[
-            { icon: '🎓', label: 'Excellence' },
-            { icon: '🚀', label: 'No limits' },
-            { icon: '⭐', label: 'Every child' },
-          ].map(({ icon, label }) => (
-            <div key={label} className="flex items-center gap-2 bg-white/15 px-4 py-2 rounded-full font-inter text-sm font-medium">
-              <span>{icon}</span>
-              <span>{label}</span>
-            </div>
-          ))}
+        {/* Left: text */}
+        <div className="text-center md:text-left">
+          <span className="inline-block bg-[#F59E0B]/20 text-[#F59E0B] text-xs font-inter font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6">
+            Our Promise
+          </span>
+          <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-[3.25rem] text-white leading-[1.1] mb-6">
+            Great education<br />
+            opens <span className="text-[#FBBF24]">every door.</span>
+          </h2>
+          <p className="font-inter text-white/60 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
+            At VNC Public School we don't just teach - we build curious minds, strong character, and unshakeable confidence. Every student, Nursery to Class 12, leaves ready for whatever the world demands.
+          </p>
+          <Link
+            href="/admissions"
+            className="inline-flex items-center gap-2 bg-[#F59E0B] hover:bg-[#D97706] text-white font-inter font-bold text-sm px-7 py-3.5 rounded-full transition-colors duration-200 shadow-lg"
+          >
+            Apply for 2025-26 →
+          </Link>
+
+          {/* Three pillars */}
+          <div className="grid grid-cols-3 gap-4 mt-10 pt-10 border-t border-white/10">
+            {[
+              { stat: 'K-12', label: 'Nursery to Class 12' },
+              { stat: 'CBSE', label: 'Board curriculum' },
+              { stat: 'GKP', label: 'Gorakhpur, UP' },
+            ].map(({ stat, label }) => (
+              <div key={stat} className="text-center md:text-left">
+                <p className="font-display font-bold text-xl md:text-2xl text-white mb-0.5">{stat}</p>
+                <p className="font-inter text-white/40 text-xs leading-snug">{label}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-      {/* SVG Illustration */}
-      <div className="flex-shrink-0 w-64 md:w-80 hidden sm:block" aria-hidden="true">
-        <svg viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto drop-shadow-lg">
+        {/* Right: Constellation SVG */}
+        <div className="hidden md:flex justify-center items-center" aria-hidden="true">
+          <svg viewBox="0 0 380 340" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-md">
 
-          {/* Globe */}
-          <circle cx="170" cy="150" r="90" fill="white" fillOpacity="0.12" stroke="white" strokeOpacity="0.3" strokeWidth="1.5"/>
-          <ellipse cx="170" cy="150" rx="35" ry="90" stroke="white" strokeOpacity="0.25" strokeWidth="1" fill="none"/>
-          <line x1="80" y1="150" x2="260" y2="150" stroke="white" strokeOpacity="0.25" strokeWidth="1"/>
-          <ellipse cx="170" cy="150" rx="90" ry="28" stroke="white" strokeOpacity="0.2" strokeWidth="1" fill="none"/>
+            {/* Constellation lines */}
+            <line x1="190" y1="75" x2="100" y2="195" stroke="white" strokeOpacity="0.1" strokeWidth="1"/>
+            <line x1="190" y1="75" x2="280" y2="195" stroke="white" strokeOpacity="0.1" strokeWidth="1"/>
+            <line x1="100" y1="195" x2="190" y2="268" stroke="white" strokeOpacity="0.1" strokeWidth="1"/>
+            <line x1="280" y1="195" x2="190" y2="268" stroke="white" strokeOpacity="0.1" strokeWidth="1"/>
+            <line x1="190" y1="75" x2="316" y2="56" stroke="white" strokeOpacity="0.07" strokeWidth="1"/>
+            <line x1="100" y1="195" x2="52" y2="128" stroke="white" strokeOpacity="0.07" strokeWidth="1"/>
 
-          {/* Child sitting — body */}
-          <ellipse cx="128" cy="222" rx="28" ry="10" fill="white" fillOpacity="0.15"/>
-          <path d="M116 200 Q108 218 100 225" stroke="white" strokeWidth="7" strokeLinecap="round"/>
-          <path d="M140 200 Q148 218 156 225" stroke="white" strokeWidth="7" strokeLinecap="round"/>
-          <rect x="114" y="172" width="28" height="32" rx="8" fill="white" fillOpacity="0.9"/>
-          <circle cx="128" cy="158" r="16" fill="white" fillOpacity="0.95"/>
-          <path d="M112 155 Q115 142 128 140 Q141 142 144 155" fill="white" fillOpacity="0.4"/>
-          <path d="M114 180 Q96 188 90 196" stroke="white" strokeWidth="7" strokeLinecap="round"/>
-          <path d="M142 180 Q158 188 163 196" stroke="white" strokeWidth="7" strokeLinecap="round"/>
+            {/* Dashed orbit */}
+            <circle cx="190" cy="75" r="68" stroke="white" strokeOpacity="0.05" strokeWidth="1" strokeDasharray="4 10"/>
 
-          {/* Open book */}
-          <path d="M86 195 Q128 185 170 195 L170 230 Q128 220 86 230 Z" fill="#F59E0B" fillOpacity="0.9"/>
-          <path d="M170 195 Q212 185 254 195 L254 230 Q212 220 170 230 Z" fill="#FBBF24" fillOpacity="0.9"/>
-          <line x1="170" y1="195" x2="170" y2="230" stroke="white" strokeWidth="2" strokeOpacity="0.6"/>
-          <line x1="100" y1="210" x2="156" y2="207" stroke="white" strokeWidth="1.5" strokeOpacity="0.5"/>
-          <line x1="100" y1="218" x2="156" y2="215" stroke="white" strokeWidth="1.5" strokeOpacity="0.5"/>
-          <line x1="184" y1="207" x2="240" y2="210" stroke="white" strokeWidth="1.5" strokeOpacity="0.5"/>
-          <line x1="184" y1="215" x2="240" y2="218" stroke="white" strokeWidth="1.5" strokeOpacity="0.5"/>
-
-          {/* Stars */}
-          {[
-            [52, 60], [270, 48], [290, 140], [58, 200], [240, 240], [80, 100]
-          ].map(([x, y], i) => (
-            <g key={i} transform={`translate(${x},${y})`}>
-              <polygon points="0,-7 2,-2 7,-2 3,2 5,7 0,4 -5,7 -3,2 -7,-2 -2,-2" fill="#FBBF24" fillOpacity="0.85"/>
+            {/* — Graduation cap (top center, amber) — */}
+            <g transform="translate(190,75)">
+              <polygon points="-48,-13 0,-27 48,-13 0,1" fill="#F59E0B" fillOpacity="0.92"/>
+              <polygon points="-34,-13 0,-5 34,-13 0,-27" fill="#FBBF24" fillOpacity="0.6"/>
+              <line x1="48" y1="-13" x2="48" y2="13" stroke="#F59E0B" strokeWidth="2.5" strokeLinecap="round"/>
+              <circle cx="48" cy="15" r="4.5" fill="#F59E0B" fillOpacity="0.9"/>
+              <rect x="-18" y="1" width="36" height="24" rx="4" fill="#F59E0B" fillOpacity="0.2" stroke="#F59E0B" strokeOpacity="0.35" strokeWidth="1.5"/>
             </g>
-          ))}
 
-          {/* Rocket */}
-          <g transform="translate(248,72) rotate(-30)">
-            <path d="M0 -20 Q6 -8 6 4 L0 10 L-6 4 Q-6 -8 0 -20Z" fill="white" fillOpacity="0.9"/>
-            <path d="M-6 6 Q-10 12 -8 16 L0 12 L8 16 Q10 12 6 6Z" fill="#EA580C" fillOpacity="0.9"/>
-            <circle cx="0" cy="-4" r="3" fill="#64B6AC"/>
-            <path d="M-6 2 L-12 8" stroke="white" strokeWidth="2" strokeOpacity="0.6" strokeLinecap="round"/>
-            <path d="M6 2 L12 8" stroke="white" strokeWidth="2" strokeOpacity="0.6" strokeLinecap="round"/>
-          </g>
+            {/* — Book stack (bottom left, white) — */}
+            <g transform="translate(100,195)">
+              <rect x="-36" y="12" width="72" height="15" rx="3" fill="white" fillOpacity="0.82"/>
+              <rect x="-30" y="-2" width="72" height="15" rx="3" fill="white" fillOpacity="0.60"/>
+              <rect x="-24" y="-16" width="72" height="15" rx="3" fill="#64B6AC" fillOpacity="0.65"/>
+              <line x1="-24" y1="-9" x2="-24" y2="27" stroke="white" strokeOpacity="0.35" strokeWidth="1.5"/>
+              <line x1="-30" y1="5" x2="-30" y2="27" stroke="white" strokeOpacity="0.25" strokeWidth="1.5"/>
+            </g>
 
-          <circle cx="100" cy="75" r="5" fill="white" fillOpacity="0.6"/>
-          <circle cx="240" cy="190" r="4" fill="#EA580C" fillOpacity="0.8"/>
-          <circle cx="60" cy="160" r="3.5" fill="#FBBF24" fillOpacity="0.8"/>
-        </svg>
+            {/* — Pencil (bottom right, white) — */}
+            <g transform="translate(280,195) rotate(-18)">
+              <rect x="-6" y="-38" width="12" height="56" rx="3" fill="white" fillOpacity="0.82"/>
+              <polygon points="-6,18 6,18 0,34" fill="#F59E0B" fillOpacity="0.9"/>
+              <polygon points="-2,26 2,26 0,34" fill="#0e3533" fillOpacity="0.9"/>
+              <rect x="-6" y="-46" width="12" height="10" rx="2" fill="#EA580C" fillOpacity="0.75"/>
+              <rect x="-6" y="-38" width="12" height="5" fill="white" fillOpacity="0.15"/>
+            </g>
+
+            {/* — Globe (bottom center, white) — */}
+            <g transform="translate(190,268)">
+              <circle cx="0" cy="0" r="28" stroke="white" strokeOpacity="0.45" strokeWidth="1.5" fill="white" fillOpacity="0.05"/>
+              <ellipse cx="0" cy="0" rx="11" ry="28" stroke="white" strokeOpacity="0.25" strokeWidth="1"/>
+              <line x1="-28" y1="0" x2="28" y2="0" stroke="white" strokeOpacity="0.25" strokeWidth="1"/>
+              <ellipse cx="0" cy="0" rx="28" ry="10" stroke="white" strokeOpacity="0.18" strokeWidth="1"/>
+            </g>
+
+            {/* Accent nodes */}
+            <g transform="translate(316,56)">
+              <circle cx="0" cy="0" r="16" fill="#64B6AC" fillOpacity="0.18" stroke="#64B6AC" strokeOpacity="0.45" strokeWidth="1.5"/>
+              <circle cx="0" cy="0" r="7" fill="#64B6AC" fillOpacity="0.55"/>
+            </g>
+            <g transform="translate(52,128)">
+              <circle cx="0" cy="0" r="12" fill="white" fillOpacity="0.05" stroke="white" strokeOpacity="0.18" strokeWidth="1"/>
+              <circle cx="0" cy="0" r="5" fill="white" fillOpacity="0.45"/>
+            </g>
+
+            {/* Stars */}
+            {[[36,38],[346,98],[56,278],[344,258],[158,28],[238,312],[310,180],[72,240]].map(([x, y], i) => (
+              <g key={i} transform={`translate(${x},${y})`}>
+                <polygon
+                  points="0,-5 1.4,-1.4 5,-1.4 2,1 3.2,4.8 0,3 -3.2,4.8 -2,1 -5,-1.4 -1.4,-1.4"
+                  fill="#FBBF24"
+                  fillOpacity={i % 3 === 0 ? 0.7 : 0.4}
+                />
+              </g>
+            ))}
+          </svg>
+        </div>
+
       </div>
     </div>
   </div>
