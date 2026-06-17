@@ -31,8 +31,10 @@ export default function Admissions() {
         <meta name="description" content="Apply for admission to VNC Public School for the 2025-26 session. Nursery to Class 12." />
       </Head>
 
-      <Header />
-      <Nav />
+      <div className="sticky top-0 z-50">
+        <Header />
+        <Nav />
+      </div>
 
       {/* Hero */}
       <div className="bg-gradient-to-br from-[#64B6AC] to-[#3d8f87] py-14 md:py-20 px-4 overflow-hidden relative">

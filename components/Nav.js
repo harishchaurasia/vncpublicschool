@@ -37,7 +37,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-[#64B6AC] px-4 md:px-6 py-3 flex justify-between items-center md:justify-center sticky top-0 z-50 shadow-md">
+      <nav className="bg-[#64B6AC] px-4 md:px-6 py-3 flex justify-between items-center md:justify-center shadow-md">
         {/* School name on mobile (left) */}
         <span className="md:hidden font-cursive text-white text-lg leading-none select-none">
           VNC Public School

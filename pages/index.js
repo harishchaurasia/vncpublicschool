@@ -29,16 +29,18 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section id="home">
-        <Head>
-          <title>VNC Public School</title>
-          <link rel="icon" href="/logo.png" />
-          <meta name="description" content="Empowering young minds for a brighter future" />
-        </Head>
+      <Head>
+        <title>VNC Public School</title>
+        <link rel="icon" href="/logo.png" />
+        <meta name="description" content="Empowering young minds for a brighter future" />
+      </Head>
+
+      <div id="home" className="sticky top-0 z-50">
         <Header />
         <Nav />
-        <Ticker notice={notice} />
-      </section>
+      </div>
+
+      <Ticker notice={notice} />
 
       {/* Carousel — no background strip, white so it blends with the header */}
       <section id="carousel" className="bg-white">
