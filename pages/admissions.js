@@ -94,50 +94,71 @@ export default function Admissions() {
       </div>
 
       <main className="flex-1 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 items-start">
 
-        {/* How to Apply */}
-        <div className="max-w-4xl mx-auto px-4 py-12">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-800 text-center mb-2">
-            How to Apply
-          </h2>
-          <p className="text-center text-gray-500 font-inter text-sm mb-10">
-            Simple 3-step process - done in under 5 minutes
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-            {steps.map((step) => (
-              <div key={step.number} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
-                <div className="w-12 h-12 rounded-full bg-[#64B6AC]/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#64B6AC] font-display font-bold text-lg">{step.number}</span>
-                </div>
-                <h3 className="font-display font-bold text-gray-800 text-lg mb-2">{step.title}</h3>
-                <p className="text-gray-500 font-inter text-sm leading-relaxed">{step.description}</p>
+            {/* LEFT — sticky info sidebar */}
+            <div className="lg:sticky lg:top-[210px]">
+
+              <h2 className="text-2xl font-display font-bold text-gray-800 mb-1">How to Apply</h2>
+              <p className="font-inter text-gray-400 text-sm mb-8">Simple 3-step process - done in under 5 minutes</p>
+
+              {/* Timeline steps */}
+              <div className="mb-8">
+                {steps.map((step, i) => (
+                  <div key={step.number} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-9 h-9 rounded-full bg-[#64B6AC]/15 flex items-center justify-center flex-shrink-0">
+                        <span className="text-[#64B6AC] font-display font-bold text-sm">{step.number}</span>
+                      </div>
+                      {i < steps.length - 1 && (
+                        <div className="w-px flex-1 bg-[#64B6AC]/20 my-1.5" />
+                      )}
+                    </div>
+                    <div className={i < steps.length - 1 ? 'pb-7' : ''}>
+                      <h3 className="font-display font-bold text-gray-800 text-base mb-1">{step.title}</h3>
+                      <p className="font-inter text-gray-500 text-sm leading-relaxed">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
 
-          {/* Info strip */}
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 mb-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-            <div>
-              <p className="text-xs text-gray-400 font-inter uppercase tracking-widest mb-1">Classes Offered</p>
-              <p className="font-display font-semibold text-gray-700">Nursery - Class 12</p>
-            </div>
-            <div>
-              <p className="text-xs text-gray-400 font-inter uppercase tracking-widest mb-1">Session</p>
-              <p className="font-display font-semibold text-gray-700">2025 - 2026</p>
-            </div>
-            <div>
-              <p className="text-xs text-gray-400 font-inter uppercase tracking-widest mb-1">Contact</p>
-              <p className="font-display font-semibold text-gray-700">+91 7054858403</p>
-            </div>
-          </div>
+              {/* Info cards */}
+              <div className="border-t border-gray-200 pt-7 space-y-4 mb-7">
+                {[
+                  { label: 'Classes Offered', value: 'Nursery - Class 12' },
+                  { label: 'Session', value: '2025 - 2026' },
+                  { label: 'Phone', value: '+91 70548 58403' },
+                ].map(({ label, value }) => (
+                  <div key={label} className="flex justify-between items-center">
+                    <span className="font-inter text-xs text-gray-400 uppercase tracking-widest">{label}</span>
+                    <span className="font-display font-semibold text-gray-700 text-sm">{value}</span>
+                  </div>
+                ))}
+              </div>
 
-          {/* The form */}
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-800 text-center mb-8">
-            Application Form
-          </h2>
-          <AdmissionForm />
+              {/* WhatsApp CTA */}
+              <a
+                href="https://wa.me/917054858403"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#1ebe5d] text-white font-inter font-bold text-sm py-3 rounded-xl transition-colors duration-200"
+              >
+                <svg viewBox="0 0 448 512" className="w-4 h-4 fill-current"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157z"/></svg>
+                Chat with us on WhatsApp
+              </a>
+            </div>
+
+            {/* RIGHT — form */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-800 mb-8">
+                Application Form
+              </h2>
+              <AdmissionForm />
+            </div>
+
+          </div>
         </div>
-
       </main>
 
       <Footer />

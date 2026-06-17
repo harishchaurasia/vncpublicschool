@@ -75,7 +75,7 @@ const AdmissionForm = () => {
 
   if (status === 'success') {
     return (
-      <div className="max-w-2xl mx-auto text-center py-12 px-6">
+      <div className="text-center py-12 px-6">
         <div className="bg-white rounded-2xl shadow-lg p-10 border border-[#64B6AC]">
           <div className="w-16 h-16 bg-[#64B6AC] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,12 +115,9 @@ const AdmissionForm = () => {
   );
 
   return (
-    <div className="max-w-2xl mx-auto px-4 pb-8">
+    <div className="pb-8">
       <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 md:p-8">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Admission Form</h2>
-          <p className="text-sm text-gray-400 mt-1">Session 2025-26 &nbsp;·&nbsp; All fields marked <span className="text-red-500">*</span> are required</p>
-        </div>
+        <p className="text-sm text-gray-400 mb-6">Session 2025-26 &nbsp;·&nbsp; All fields marked <span className="text-red-500">*</span> are required</p>
 
         <form onSubmit={handleSubmit} noValidate>
 
