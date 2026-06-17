@@ -34,26 +34,26 @@ const Carousel = ({ children, interval = 5000 }) => {
         <button
           onClick={prev}
           aria-label="Previous slide"
-          className="flex-shrink-0 w-[20%] h-72 lg:h-80 xl:h-96 rounded-xl overflow-hidden opacity-40 hover:opacity-65 transition-opacity focus:outline-none cursor-pointer"
+          className="flex-shrink-0 w-[20%] h-[22rem] lg:h-[26rem] xl:h-[30rem] rounded-xl overflow-hidden opacity-40 hover:opacity-65 transition-opacity focus:outline-none cursor-pointer"
         >
           {withClass(prevIdx, 'w-full h-full object-cover')}
         </button>
 
-        <div className="flex-1 h-72 lg:h-80 xl:h-96 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
+        <div className="flex-1 h-[22rem] lg:h-[26rem] xl:h-[30rem] rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
           {withClass(current, 'w-full h-full object-cover')}
         </div>
 
         <button
           onClick={next}
           aria-label="Next slide"
-          className="flex-shrink-0 w-[20%] h-72 lg:h-80 xl:h-96 rounded-xl overflow-hidden opacity-40 hover:opacity-65 transition-opacity focus:outline-none cursor-pointer"
+          className="flex-shrink-0 w-[20%] h-[22rem] lg:h-[26rem] xl:h-[30rem] rounded-xl overflow-hidden opacity-40 hover:opacity-65 transition-opacity focus:outline-none cursor-pointer"
         >
           {withClass(nextIdx, 'w-full h-full object-cover')}
         </button>
       </div>
 
       {/* Single image - mobile */}
-      <div className="md:hidden relative h-52 sm:h-64 mx-3 rounded-2xl overflow-hidden shadow-lg">
+      <div className="md:hidden relative h-60 sm:h-72 mx-3 rounded-2xl overflow-hidden shadow-lg">
         {withClass(current, 'w-full h-full object-cover')}
 
         <button
