@@ -22,7 +22,7 @@ const offices = [
 
 const ContactUs = () => {
   return (
-    <div className="max-w-4xl mx-auto px-4">
+    <div className="max-w-3xl mx-auto px-4">
 
       {/* Address card */}
       <div className="bg-[#64B6AC] rounded-2xl p-6 md:p-8 mb-8 text-white shadow-lg">

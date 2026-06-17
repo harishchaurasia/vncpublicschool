@@ -43,7 +43,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm font-inter">
             <li className="flex items-start gap-2.5">
               <FaMapMarkerAlt className="text-[#64B6AC] mt-0.5 flex-shrink-0" />
-              <span>Gajpur Bazaar Rd, Gajpur,<br />Gorakhpur, UP – 273413</span>
+              <span>Gajpur Bazaar Rd, Gajpur,<br />Gorakhpur, UP - 273413</span>
             </li>
             <li className="flex items-center gap-2.5">
               <FaPhone className="text-[#64B6AC] flex-shrink-0" />
@@ -63,7 +63,7 @@ const Footer = () => {
           <h3 className="text-white font-display font-bold mb-4 uppercase tracking-widest text-sm">Quick Links</h3>
           <ul className="space-y-2 text-sm font-inter">
             <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
-            <li><Link href="/admissions" className="hover:text-white transition-colors">Admissions 2025–26</Link></li>
+            <li><Link href="/admissions" className="hover:text-white transition-colors">Admissions 2025-26</Link></li>
           </ul>
         </div>
       </div>
