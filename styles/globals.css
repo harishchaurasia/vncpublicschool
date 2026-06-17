@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Define font-face for self-hosted fonts */
 @font-face {
   font-family: 'New Rocker';
   src: url('/fonts/NewRocker-Regular.ttf') format('truetype');
@@ -17,7 +16,6 @@
   font-style: normal;
 }
 
-/* Use Tailwind's font-family utility classes */
 .font-cursive {
   font-family: 'New Rocker', cursive;
 }
@@ -26,253 +24,35 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* Add these styles to ensure the main section and other parts have correct height and layout */
-body, html {
-  height: 100%;
+html, body {
   margin: 0;
   padding: 0;
+  background-color: #F4F6F8;
 }
 
-.min-h-screen {
-  min-height: 100vh;
+body {
+  overflow-x: clip;
 }
 
-.main-style {
-  padding: 20px;
-}
-
-.section {
-  margin-bottom: 2rem;
-}
-
-
-/* MAIN SECTION */
-.main-style {
-  padding: 10px;
-  background: #edfff3;
-  min-height: calc(100vh - 120px);
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-
-
-/* NAV-BAR */
+/* Nav links — Inter, white on teal */
 .nav-link {
-  color: black;
-  font-size: 18px;
-  font-family: 'New Rocker', cursive;
-  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   text-decoration: none;
-  margin: 1px 0;
   cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: color 0.15s ease;
+  display: inline-block;
 }
 
-/* FOR NEWS TICKER */
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Ticker */
 @keyframes ticker {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.animate-ticker {
-  animation: ticker 25s linear infinite;
-}
-
-  
-/* FOR IMAGE CAROUSEL */
-.relative {
-  background-color: #edfff3;
-}
-
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 1280px;
-  margin: auto;
-  perspective: 1000px;
-  padding: 20px;
-  box-sizing: border-box; 
-}
-
-.carousel-slides {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 400px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.carousel-slide {
-  position: absolute;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  width: 60%;
-  height: 100%;
-  opacity: 0;
-  transform: scale(0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  margin: 0 10px; 
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  padding: 10px; 
-  box-sizing: border-box; 
-}
-
-.carousel-slide.active {
-  opacity: 1;
-  transform: scale(1);
-  z-index: 1;
-}
-
-.carousel-slide.next {
-  opacity: 0.5;
-  transform: translateX(80%) scale(0.8);
-  z-index: 0;
-}
-
-.carousel-slide.prev {
-  opacity: 0.5;
-  transform: translateX(-80%) scale(0.8);
-  z-index: 0;
-}
-
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-.carousel-markers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.carousel-marker {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.carousel-marker.active {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-
-/* Contact Card */
-
-.contact-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.contact-info {
-  text-align: center;
-  margin-bottom: 45px;
-  font-size: 20px;
-}
-
-.contact-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Ensure the cards wrap on smaller screens */
-}
-
-.contact-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  text-align: center;
-  background-color: #edfff3;
-  flex: 1 1 300px;
-  max-width: calc(100% - 40px); 
-  min-width: 280px;
-  box-sizing: border-box;
-}
-
-.office-name {
-  font-size: 20px;
-  font-family: 'Arial, sans-serif';
-  margin-top: 8px; 
-  margin-bottom: 35px;
-  text-align: center;
-}
-
-.contact-item {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.call-button, .whatsapp-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: 'Arial, sans-serif';
-  color: #fff;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 300px; /* Optional: limit the max width of buttons */
-}
-
-.call-button {
-  background-color: #353935;
-}
-
-.whatsapp-button {
-  background-color: #64B6AC;
-}
-
-.icon {
-  margin-right: 5px;
-}
-
-@media (max-width: 590px) {
-  .contact-cards {
-      flex-direction: column; /* Stack cards vertically on smaller screens */
-      align-items: center; /* Center align the cards */
-  }
-
-  .contact-card {
-      max-width: 100%; /* Ensure it takes the full width available */
-      min-width: unset; /* Reset min-width for small screens */
-  }
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }

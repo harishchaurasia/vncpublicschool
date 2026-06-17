@@ -10,7 +10,7 @@ export default function handler(req, res) {
     {
       "type": "youtube",
       "videoId": "https://youtu.be/L5F9rj5tMB0",
-      "title": "Memorable Zoo Trip – Exploring Wildlife in Gorakhpur",
+      "title": "Memorable Zoo Trip - Exploring Wildlife in Gorakhpur",
       "description": "Highlights from our exciting visit to Gorakhpur Zoo, where students experienced wildlife up close and gained valuable insights into animal conservation."
     }
     

@@ -5,16 +5,23 @@ const Gallery = () => {
 
   useEffect(() => {
     fetch('/api/gallery')
-      .then(response => response.json())
-      .then(data => setImages(data));
+      .then((r) => r.json())
+      .then(setImages);
   }, []);
 
   return (
     <div>
-      <div className="flex flex-wrap justify-center p-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3">
         {images.map((image, index) => (
-          <div key={index} className="m-2 rounded-lg overflow-hidden shadow-lg w-96 bg-white relative">
-            <img src={`/gallery/${image}`} alt={`Gallery Image ${index + 1}`} className="w-full h-auto block" />
+          <div
+            key={index}
+            className="rounded-xl overflow-hidden shadow-md bg-gray-200 aspect-square group hover:shadow-lg transition-shadow duration-200"
+          >
+            <img
+              src={`/gallery/${image}`}
+              alt={`Gallery ${index + 1}`}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
           </div>
         ))}
       </div>

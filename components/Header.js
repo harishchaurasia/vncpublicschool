@@ -3,46 +3,71 @@ import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaWhatsapp
 
 const Header = () => {
     return (
-        <header className="bg-[#d1eeda] p-2 relative">
-            <div className="flex flex-col md:flex-row justify-between items-center px-5">
-                <div className="flex flex-col md:flex-row items-center text-lg font-bold space-x-0 md:space-x-4">
-                    <div className="flex items-center space-x-1 mb-1 md:mb-0">
-                        <FaPhoneAlt className="text-black" />
-                        <p className="m-0">+91 7054858403 |</p>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                        <FaEnvelope className="text-black" />
-                        <p className="m-0">vncpublicgajpur@gmail.com</p>
-                    </div>
+        <header>
+            {/* Top contact bar — desktop only */}
+            <div className="hidden md:flex justify-between items-center bg-gray-900 px-6 py-2 text-sm text-gray-300">
+                <div className="flex items-center gap-6">
+                    <a
+                        href="tel:+917054858403"
+                        className="flex items-center gap-2 hover:text-white transition-colors duration-150"
+                    >
+                        <FaPhoneAlt className="text-[#64B6AC] text-xs" />
+                        <span>+91 70548 58403</span>
+                    </a>
+                    <a
+                        href="mailto:vncpublicgajpur@gmail.com"
+                        className="flex items-center gap-2 hover:text-white transition-colors duration-150"
+                    >
+                        <FaEnvelope className="text-[#64B6AC] text-xs" />
+                        <span>vncpublicgajpur@gmail.com</span>
+                    </a>
                 </div>
-                <div className="flex space-x-3 md:space-x-5 mt-2 md:mt-0">
-                    <a href='https://wa.me/917054858403' target='_blank' rel='noopener noreferrer'>
-                        <FaWhatsapp className="w-6 h-6 md:w-7 md:h-7 text-black" />
+                <div className="flex items-center gap-4 text-base">
+                    <a href="https://wa.me/917054858403" target="_blank" rel="noopener noreferrer"
+                       className="hover:text-[#25D366] transition-colors duration-150" aria-label="WhatsApp">
+                        <FaWhatsapp />
                     </a>
-                    <a href='mailto:vncpublicgajpur@gmail.com' target='_blank'>
-                        <FaEnvelope className="w-6 h-6 md:w-7 md:h-7 text-black" />
+                    <a href="mailto:vncpublicgajpur@gmail.com"
+                       className="hover:text-[#64B6AC] transition-colors duration-150" aria-label="Email">
+                        <FaEnvelope />
                     </a>
-                    <a href='https://www.facebook.com/vncpublicschool/' target='_blank' rel='noopener noreferrer'>
-                        <FaFacebook className="w-6 h-6 md:w-7 md:h-7 text-black" />
+                    <a href="https://www.facebook.com/vncpublicschool/" target="_blank" rel="noopener noreferrer"
+                       className="hover:text-[#1877F2] transition-colors duration-150" aria-label="Facebook">
+                        <FaFacebook />
                     </a>
-                    <a href='https://www.instagram.com/vncpublicschool/' target='_blank' rel='noopener noreferrer'>
-                        <FaInstagram className="w-6 h-6 md:w-7 md:h-7 text-black" />
+                    <a href="https://www.instagram.com/vncpublicschool/" target="_blank" rel="noopener noreferrer"
+                       className="hover:text-[#E4405F] transition-colors duration-150" aria-label="Instagram">
+                        <FaInstagram />
                     </a>
-                    <a href='https://www.linkedin.com/company/vnc-public-school/' target='_blank' rel='noopener noreferrer'>
-                        <FaLinkedin className="w-6 h-6 md:w-7 md:h-7 text-black" />
+                    <a href="https://www.linkedin.com/company/vnc-public-school/" target="_blank" rel="noopener noreferrer"
+                       className="hover:text-[#0A66C2] transition-colors duration-150" aria-label="LinkedIn">
+                        <FaLinkedin />
                     </a>
                 </div>
             </div>
-            <hr className="border-t-2 border-[#64B6AC] my-2" />
-            <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
-                <a href="https://www.vncpublicschool.com" rel="noopener noreferrer">
-                    <img className="w-20 h-24 md:w-28 md:h-32 mx-auto md:mx-0" src="/logo.png" alt="School Logo" />
-                </a>
-                <div className="ml-0 md:ml-5 mt-2 md:mt-0">
-                    <h1 className="text-3xl md:text-6xl font-cursive capitalize mb-2">VNC Public School</h1>
-                    <p className="text-lg md:text-xl font-cursive capitalize ml-0 md:ml-11">Empowering young minds for a brighter future</p>
+
+            {/* Brand bar */}
+            <div className="bg-white border-b border-gray-100 py-3 px-4 md:px-8">
+                <div className="flex flex-row items-center justify-center gap-4 max-w-screen-xl mx-auto">
+                    <a href="/" aria-label="VNC Public School home">
+                        <img
+                            className="w-16 h-20 md:w-20 md:h-24 object-contain flex-shrink-0"
+                            src="/logo.png"
+                            alt="VNC Public School Logo"
+                        />
+                    </a>
+                    <div className="text-center">
+                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-cursive capitalize leading-tight text-gray-900">
+                            VNC Public School
+                        </h1>
+                        <p className="text-xs sm:text-sm md:text-base font-inter text-gray-500 mt-0.5">
+                            Empowering young minds for a brighter future
+                        </p>
+                    </div>
                 </div>
             </div>
+
+            <div className="h-1 bg-gradient-to-r from-[#64B6AC] via-[#F59E0B] to-[#EA580C]" />
         </header>
     );
 };

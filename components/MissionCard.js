@@ -1,13 +1,11 @@
-import React from 'react';
-
-const MissionCard = ({ imageSrc, heading, text }) => {
-    return (
-        <div className="border border-gray-300 rounded-lg p-6 text-center m-4 shadow-md bg-green-100 flex-1 min-w-[200px] max-w-[280px]">
-            <img className="w-24 h-auto mx-auto mb-4" src={imageSrc} alt={heading} />
-            <h3 className="text-lg md:text-xl font-semibold mb-2">{heading}</h3>
-            <p className="text-sm md:text-base">{text}</p>
-        </div>
-    );
-};
+const MissionCard = ({ icon, heading, text }) => (
+  <div className="bg-white rounded-2xl p-5 md:p-6 text-center border border-gray-200 border-t-4 border-t-[#64B6AC] shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div className="w-16 h-16 bg-[#64B6AC]/10 rounded-full flex items-center justify-center mx-auto mb-4 text-[#64B6AC]">
+      {icon}
+    </div>
+    <h3 className="text-base md:text-lg font-display font-bold text-gray-800 mb-2">{heading}</h3>
+    <p className="text-sm text-gray-500 font-inter leading-relaxed">{text}</p>
+  </div>
+);
 
 export default MissionCard;

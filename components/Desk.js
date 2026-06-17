@@ -2,19 +2,20 @@ import React from 'react';
 
 const DeskCard = ({ image, name, position, message }) => {
   return (
-    <div className="flex flex-col md:flex-row border border-gray-300 rounded-lg shadow-lg p-4 m-6 bg-green-100 w-full max-w-2xl">
-      <div className="flex flex-col items-center mb-4 md:mb-0 md:mr-4">
-        <div className="mb-4">
-          <img className="rounded-full w-20 h-20 md:w-24 md:h-24 object-cover" src={image} alt={`${name}'s picture`} />
-        </div>
-        <div className="text-center">
-          <h2 className="my-2 text-lg md:text-xl font-semibold">{name}</h2>
-          <h3 className="m-0 text-base md:text-lg text-gray-600 font-bold uppercase">{position}</h3>
-        </div>
-      </div>
-      <div className="flex-1 flex items-center justify-center text-center md:text-left">
-        <p className="mt-4 mb-4 m-5 text-xs md:text-sm text-gray-800">{message}</p>
-      </div>
+    <div className="bg-white rounded-2xl border border-gray-200 border-t-4 border-t-[#64B6AC] shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6 flex flex-col items-center text-center">
+      <img
+        className="rounded-full w-24 h-24 object-cover ring-4 ring-[#64B6AC]/25 mb-4 flex-shrink-0"
+        src={image}
+        alt={name}
+      />
+      <h2 className="text-lg font-display font-bold text-gray-800">{name}</h2>
+      <span className="mt-1 mb-4 text-xs font-inter font-semibold text-[#64B6AC] uppercase tracking-widest">
+        {position}
+      </span>
+      <div className="w-8 h-0.5 bg-[#64B6AC]/30 rounded-full mb-4" />
+      <p className="text-sm text-gray-500 font-inter leading-relaxed line-clamp-5">
+        &ldquo;{message}&rdquo;
+      </p>
     </div>
   );
 };

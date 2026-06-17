@@ -18,6 +18,12 @@ export default function Document() {
                     type="font/ttf"
                     crossOrigin="anonymous"
                 />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+                    rel="stylesheet"
+                />
             </Head>
             <body style={{ margin: '0', height: '100%', minHeight: '100vh' }}>
                 <Main />

@@ -1,35 +1,78 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
-import VisitCounter from '../components/VisitCounter';
+import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import ScrollToTopButton from '../components/ScrollToTop';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#64B6AC] p-5 flex flex-col items-center">
-      <div className="flex flex-col md:flex-row justify-between items-center flex-wrap w-full max-w-screen-xl mx-auto px-5">
-        <div className="flex flex-col md:flex-row items-center mt-4 md:mt-10">
-          <img src="/logo.png" alt="School Logo" className="w-24 h-28 md:w-36 md:h-40 md:mr-4 mb-4 md:mb-0" />
-          <p className="text-2xl md:text-4xl font-cursive capitalize text-center md:text-left">VNC Public School</p>
-        </div>
-        <div className="text-center md:text-left mb-4 md:mb-0">
-          <p className="my-2 text-base md:text-lg">Address: Gajpur Bazaar Rd, Gajpur, Gorakhpur,</p>
-          <p className="my-2 text-base md:text-lg">Uttar Pradesh, 273413, India.</p>
-          <p className="my-2 text-base md:text-lg">Email: vncpublicgajpur@gmail.com</p>
-          <p className="my-2 text-base md:text-lg">Phone: +917054858403</p>
-          <div className="flex justify-center md:justify-start space-x-4 mt-2">
-            <a href="https://wa.me/917054858403" target='_blank' className="text-black text-2xl"><FaWhatsapp /></a>
-            <a href="https://www.instagram.com/vncpublicschool/" target='_blank' className="text-black text-2xl"><FaInstagram /></a>
-            <a href="https://www.facebook.com/vncpublicschool/" target='_blank' className="text-black text-2xl"><FaFacebook /></a>
-            <a href="https://www.linkedin.com/company/vnc-public-school/" target='_blank' className="text-black text-2xl"><FaLinkedin /></a>
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="max-w-screen-xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        {/* Brand column */}
+        <div className="flex flex-col items-center md:items-start">
+          <div className="flex items-center gap-3 mb-4">
+            <img src="/logo.png" alt="VNC Public School" className="w-14 h-16 object-contain" />
+            <span className="font-cursive text-white text-xl leading-tight">VNC Public School</span>
+          </div>
+          <p className="text-sm text-gray-400 font-inter leading-relaxed text-center md:text-left max-w-xs">
+            Empowering young minds for a brighter future. Quality education for Nursery to Class 12.
+          </p>
+          <div className="flex gap-4 mt-5 text-xl">
+            <a href="https://wa.me/917054858403" target="_blank" rel="noopener noreferrer"
+               className="hover:text-[#25D366] transition-colors duration-150" aria-label="WhatsApp">
+              <FaWhatsapp />
+            </a>
+            <a href="https://www.instagram.com/vncpublicschool/" target="_blank" rel="noopener noreferrer"
+               className="hover:text-[#E4405F] transition-colors duration-150" aria-label="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="https://www.facebook.com/vncpublicschool/" target="_blank" rel="noopener noreferrer"
+               className="hover:text-[#1877F2] transition-colors duration-150" aria-label="Facebook">
+              <FaFacebook />
+            </a>
+            <a href="https://www.linkedin.com/company/vnc-public-school/" target="_blank" rel="noopener noreferrer"
+               className="hover:text-[#0A66C2] transition-colors duration-150" aria-label="LinkedIn">
+              <FaLinkedin />
+            </a>
           </div>
         </div>
-        <div className="mt-4 md:mt-0 text-base md:text-lg text-black">
-          {/* <VisitCounter /> */}
+
+        {/* Contact column */}
+        <div>
+          <h3 className="text-white font-display font-bold mb-4 uppercase tracking-widest text-sm">Contact Us</h3>
+          <ul className="space-y-3 text-sm font-inter">
+            <li className="flex items-start gap-2.5">
+              <FaMapMarkerAlt className="text-[#64B6AC] mt-0.5 flex-shrink-0" />
+              <span>Gajpur Bazaar Rd, Gajpur,<br />Gorakhpur, UP – 273413</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <FaPhone className="text-[#64B6AC] flex-shrink-0" />
+              <a href="tel:+917054858403" className="hover:text-white transition-colors">+91 70548 58403</a>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <FaEnvelope className="text-[#64B6AC] flex-shrink-0" />
+              <a href="mailto:vncpublicgajpur@gmail.com" className="hover:text-white transition-colors break-all">
+                vncpublicgajpur@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Quick links column */}
+        <div>
+          <h3 className="text-white font-display font-bold mb-4 uppercase tracking-widest text-sm">Quick Links</h3>
+          <ul className="space-y-2 text-sm font-inter">
+            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
+            <li><Link href="/admissions" className="hover:text-white transition-colors">Admissions 2025–26</Link></li>
+          </ul>
         </div>
       </div>
-      <div className="w-full mt-4 md:mt-8 text-sm md:text-base text-center">
-        <p>Copyright © 2024 VNC Public School. All Rights Reserved.</p>
+
+      {/* Bottom bar */}
+      <div className="border-t border-gray-800 px-6 py-4 text-center text-xs text-gray-500 font-inter">
+        <p>© 2025 VNC Public School. All Rights Reserved.</p>
       </div>
+
       <ScrollToTopButton />
     </footer>
   );
