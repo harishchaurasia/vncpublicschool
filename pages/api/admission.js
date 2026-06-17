@@ -7,6 +7,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  if (!process.env.RESEND_API_KEY) {
+    return res.status(503).json({ error: 'Email service not configured. Add RESEND_API_KEY to environment variables.' });
+  }
+
   const {
     studentName, dob, gender, classApplying, previousSchool,
     parentName, relation, mobile, whatsapp, email, address,
@@ -62,7 +66,7 @@ export default async function handler(req, res) {
             ${row('Date of Birth', dob)}
             ${row('Gender', gender)}
             ${row('Class Applied For', classApplying)}
-            ${row('Previous School', previousSchool || '—')}
+            ${row('Previous School', previousSchool || '-')}
           </table>
 
           <!-- Parent Info -->
@@ -72,7 +76,7 @@ export default async function handler(req, res) {
             ${row('Relation', relation)}
             ${row('Mobile', mobile)}
             ${row('WhatsApp', whatsapp || mobile)}
-            ${row('Email', email || '—')}
+            ${row('Email', email || '-')}
           </table>
 
           <!-- Address -->
