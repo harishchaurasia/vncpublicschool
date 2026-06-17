@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import ScrollToTopButton from '../components/ScrollToTop';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -73,7 +72,6 @@ const Footer = () => {
         <p>© 2025 VNC Public School. All Rights Reserved.</p>
       </div>
 
-      <ScrollToTopButton />
     </footer>
   );
 };
