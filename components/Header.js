@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 
 const Header = () => {
@@ -50,10 +51,13 @@ const Header = () => {
             <div className="bg-white border-b border-gray-100 py-3 px-4 md:px-8">
                 <div className="flex flex-row items-center justify-center gap-4 max-w-screen-xl mx-auto">
                     <a href="/" aria-label="VNC Public School home">
-                        <img
-                            className="w-16 h-20 md:w-20 md:h-24 object-contain flex-shrink-0"
+                        <Image
                             src="/logo.png"
                             alt="VNC Public School Logo"
+                            width={80}
+                            height={96}
+                            className="w-16 h-20 md:w-20 md:h-24 object-contain flex-shrink-0"
+                            priority
                         />
                     </a>
                     <div className="text-center">

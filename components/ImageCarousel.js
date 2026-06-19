@@ -5,13 +5,9 @@ const ImageCarousel = () => {
   const [imageFilenames, setImageFilenames] = useState([]);
 
   useEffect(() => {
-    const fetchImages = async () => {
-      const response = await fetch('/api/gallery');
-      const filenames = await response.json();
-      setImageFilenames(filenames.slice(0, 5));
-    };
-
-    fetchImages();
+    fetch('/api/gallery')
+      .then(r => r.json())
+      .then(filenames => setImageFilenames(filenames.slice(0, 5)));
   }, []);
 
   return (
@@ -22,6 +18,8 @@ const ImageCarousel = () => {
             key={index}
             src={`/gallery/${filename}`}
             alt={`VNC Public School - ${index + 1}`}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            decoding="async"
           />
         ))}
       </Carousel>

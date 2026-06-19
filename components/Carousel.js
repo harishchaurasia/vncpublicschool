@@ -20,8 +20,11 @@ const Carousel = ({ children, interval = 5000 }) => {
 
   if (count === 0) return null;
 
-  const withClass = (idx, cls) =>
-    React.cloneElement(slides[idx], { className: cls, style: {} });
+  const withClass = (idx, cls) => {
+    const slide = slides[idx];
+    const existing = slide.props.className || '';
+    return React.cloneElement(slide, { className: `${existing} ${cls}`.trim(), style: {} });
+  };
 
   return (
     <section

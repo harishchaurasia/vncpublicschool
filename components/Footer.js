@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaWhatsapp, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -10,7 +11,7 @@ const Footer = () => {
         {/* Brand column */}
         <div className="flex flex-col items-center md:items-start">
           <div className="flex items-center gap-3 mb-4">
-            <img src="/logo.png" alt="VNC Public School" className="w-14 h-16 object-contain" />
+            <Image src="/logo.png" alt="VNC Public School" width={56} height={64} className="object-contain" />
             <span className="font-cursive text-white text-xl leading-tight">VNC Public School</span>
           </div>
           <p className="text-sm text-gray-400 font-inter leading-relaxed text-center md:text-left max-w-xs">

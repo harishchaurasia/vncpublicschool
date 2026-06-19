@@ -35,20 +35,20 @@ export default function Home() {
         <meta name="description" content="Empowering young minds for a brighter future" />
       </Head>
 
-      <div id="home" className="sticky top-0 z-50">
-        <Header />
-        <Nav />
+      {/* Above-fold wrapper — header + ticker + promise fill exactly one screen */}
+      <div className="flex flex-col" style={{ minHeight: '100dvh' }}>
+        <div id="home" className="sticky top-0 z-50">
+          <Header />
+          <Nav />
+        </div>
+        <Ticker notice={notice} />
+        <WorldAwaits />
       </div>
 
-      <Ticker notice={notice} />
-
-      {/* Carousel — no background strip, white so it blends with the header */}
+      {/* Carousel */}
       <section id="carousel" className="bg-white">
         <ImageCarousel />
       </section>
-
-      {/* Full-width brand statement */}
-      <WorldAwaits />
 
       {/* Our Mission — slightly tinted so it feels distinct from white header */}
       <section id="ourmission" className="bg-slate-50 py-16 px-4">
@@ -90,19 +90,19 @@ export default function Home() {
               image="./principal.jpg"
               name="R. Ashish"
               position="Principal"
-              message="Welcome to VNC Public School. It is my privilege to lead an institution that stands as a beacon of hope and learning for the children of this community. Education is not merely the transfer of knowledge - it is the kindling of curiosity, the building of character, and the awakening of potential. At VNC, every child feels valued, every question is encouraged, and every dream is taken seriously."
+              message="It is my privilege to lead an institution that stands as a beacon of hope and learning for our community. Education is not merely the transfer of knowledge — it is the kindling of curiosity, the building of character, and the awakening of every child's potential. At VNC, every dream is taken seriously."
             />
             <DeskCard
               image="./director.jpg"
               name="Bharath Chaurasia"
               position="Director"
-              message="Our vision is to offer a solid foundation for every child's educational journey. We combine modern technology with a stimulating learning environment to foster holistic development. Our school prepares students for national and international opportunities, ensuring each child can thrive and excel in whatever path they choose."
+              message="Our vision is to give every child a solid foundation for lifelong learning. We combine modern technology with a stimulating environment to foster holistic development. VNC prepares students for national and international opportunities, ensuring each child can thrive and excel in whatever path they choose to pursue."
             />
             <DeskCard
               image="./chairman.jpg"
               name="Shatrudhan Chaurasia"
               position="Chairman"
-              message="Every child is unique and special. Our philosophy is to nurture curiosity, imagination, and creativity, allowing each student to learn at their own pace. By building a genuine love for knowledge from an early age, we ensure education is a joyful experience - and our commitment is to provide an environment where every student carves their own path."
+              message="Every child is unique and deserving of the very best. Our philosophy nurtures curiosity, imagination, and creativity, allowing each student to grow at their own pace. By building a genuine love for knowledge early on, we ensure education remains a joyful, lifelong journey for every student we serve."
             />
           </div>
         </div>
