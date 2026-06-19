@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import AdmissionForm from '../components/AdmissionForm';
+import { FaGraduationCap, FaBookOpen, FaMapMarkerAlt } from 'react-icons/fa';
 
 const steps = [
   {
@@ -37,57 +38,34 @@ export default function Admissions() {
       </div>
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#64B6AC] to-[#3d8f87] py-6 md:py-8 px-4 overflow-hidden relative">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-4 relative z-10">
+      <div className="bg-gradient-to-br from-[#64B6AC] to-[#3d8f87] py-6 md:py-8 px-4 relative">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-6">
           <div className="text-center md:text-left flex-1">
             <span className="inline-block bg-[#F59E0B] text-white text-xs font-inter font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
               Admissions Open
             </span>
             <h1 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white mb-1">
-              Join VNC Public School
+              Enrol Your Child for 2025-26
             </h1>
-            <p className="text-white/80 font-inter text-sm max-w-xl leading-relaxed">
-              Session 2025-26 · Nursery to Class 12
+            <p className="text-white/70 font-inter text-sm">
+              Nursery to Class 12 · CBSE · Gorakhpur, UP
             </p>
           </div>
-          {/* Illustration */}
-          <div className="hidden md:block flex-shrink-0 w-32" aria-hidden="true">
-            <svg viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-              {/* Stars */}
-              {[[20,20],[195,15],[205,120],[10,140],[110,10],[160,220]].map(([x,y],i) => (
-                <polygon key={i} points={`${x},-5 ${x+2},0 ${x+7},0 ${x+3},3 ${x+5},8 ${x},5 ${x-5},8 ${x-3},3 ${x-7},0 ${x-2},0`}
-                  transform={`translate(0,${y})`} fill="#FBBF24" fillOpacity="0.8"/>
-              ))}
-              {/* Pencil */}
-              <g transform="translate(80,30) rotate(20)">
-                <rect x="-8" y="-60" width="16" height="80" rx="3" fill="white" fillOpacity="0.9"/>
-                <polygon points="-8,20 8,20 0,38" fill="#F59E0B"/>
-                <polygon points="-2,30 2,30 0,38" fill="#1F2937" fillOpacity="0.8"/>
-                <rect x="-8" y="-68" width="16" height="10" rx="2" fill="#EA580C" fillOpacity="0.8"/>
-                <rect x="-8" y="-60" width="16" height="5" fill="#64B6AC" fillOpacity="0.4"/>
-              </g>
-              {/* Kid body */}
-              <circle cx="140" cy="155" r="18" fill="white" fillOpacity="0.92"/>
-              <rect x="126" y="173" width="28" height="36" rx="10" fill="white" fillOpacity="0.85"/>
-              {/* Arms up in joy */}
-              <path d="M126 182 Q108 168 105 155" stroke="white" strokeWidth="8" strokeLinecap="round" fill="none" strokeOpacity="0.9"/>
-              <path d="M154 182 Q172 168 175 155" stroke="white" strokeWidth="8" strokeLinecap="round" fill="none" strokeOpacity="0.9"/>
-              {/* Legs */}
-              <path d="M132 208 Q128 226 124 232" stroke="white" strokeWidth="7" strokeLinecap="round" fill="none" strokeOpacity="0.9"/>
-              <path d="M148 208 Q152 226 156 232" stroke="white" strokeWidth="7" strokeLinecap="round" fill="none" strokeOpacity="0.9"/>
-              {/* Hair */}
-              <path d="M122 152 Q128 138 140 136 Q152 138 158 152" fill="white" fillOpacity="0.35"/>
-              {/* School bag */}
-              <rect x="155" y="178" width="18" height="22" rx="5" fill="#F59E0B" fillOpacity="0.7" stroke="white" strokeWidth="1"/>
-              <rect x="159" y="182" width="10" height="7" rx="2" fill="white" fillOpacity="0.4"/>
-              {/* Ground shadow */}
-              <ellipse cx="140" cy="240" rx="30" ry="8" fill="white" fillOpacity="0.12"/>
-              {/* Books floating */}
-              <rect x="30" y="80" width="36" height="26" rx="3" fill="#F59E0B" fillOpacity="0.7" transform="rotate(-12,48,93)"/>
-              <rect x="34" y="84" width="36" height="26" rx="3" fill="white" fillOpacity="0.3" transform="rotate(-12,52,97)"/>
-              <line x1="40" y1="89" x2="60" y2="86" stroke="white" strokeWidth="1.5" opacity="0.6" transform="rotate(-12,50,88)"/>
-              <line x1="40" y1="94" x2="60" y2="91" stroke="white" strokeWidth="1.5" opacity="0.6" transform="rotate(-12,50,93)"/>
-            </svg>
+          {/* Stats */}
+          <div className="hidden md:flex flex-col gap-2 flex-shrink-0">
+            {[
+              { Icon: FaGraduationCap, label: 'K-12', sub: 'Nursery to Class 12' },
+              { Icon: FaBookOpen,      label: 'CBSE', sub: 'Board Curriculum' },
+              { Icon: FaMapMarkerAlt,  label: 'GKP',  sub: 'Gorakhpur, UP' },
+            ].map(({ Icon, label, sub }) => (
+              <div key={label} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-2.5">
+                <Icon size={16} className="text-[#FBBF24] flex-shrink-0" />
+                <div>
+                  <p className="text-white font-display font-bold text-sm leading-none">{label}</p>
+                  <p className="text-white/55 font-inter text-xs mt-0.5">{sub}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
