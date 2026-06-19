@@ -88,7 +88,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <DeskCard
               image="./principal.jpg"
-              name="Ashish Singh"
+              name="R. Ashish"
               position="Principal"
               message="Welcome to VNC Public School. It is my privilege to lead an institution that stands as a beacon of hope and learning for the children of this community. Education is not merely the transfer of knowledge - it is the kindling of curiosity, the building of character, and the awakening of potential. At VNC, every child feels valued, every question is encouraged, and every dream is taken seriously."
             />
