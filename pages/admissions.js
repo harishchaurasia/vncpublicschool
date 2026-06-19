@@ -37,22 +37,21 @@ export default function Admissions() {
       </div>
 
       {/* Hero */}
-      <div className="bg-gradient-to-br from-[#64B6AC] to-[#3d8f87] py-14 md:py-20 px-4 overflow-hidden relative">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 relative z-10">
+      <div className="bg-gradient-to-br from-[#64B6AC] to-[#3d8f87] py-6 md:py-8 px-4 overflow-hidden relative">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-4 relative z-10">
           <div className="text-center md:text-left flex-1">
-            <span className="inline-block bg-[#F59E0B] text-white text-xs font-inter font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5">
+            <span className="inline-block bg-[#F59E0B] text-white text-xs font-inter font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
               Admissions Open
             </span>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold text-white mb-3">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white mb-1">
               Join VNC Public School
             </h1>
-            <p className="text-white/80 font-inter text-lg max-w-xl leading-relaxed">
-              Session 2025-26 &nbsp;·&nbsp; Nursery to Class 12<br />
-              Empowering young minds for a brighter future.
+            <p className="text-white/80 font-inter text-sm max-w-xl leading-relaxed">
+              Session 2025-26 · Nursery to Class 12
             </p>
           </div>
           {/* Illustration */}
-          <div className="hidden md:block flex-shrink-0 w-56" aria-hidden="true">
+          <div className="hidden md:block flex-shrink-0 w-32" aria-hidden="true">
             <svg viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
               {/* Stars */}
               {[[20,20],[195,15],[205,120],[10,140],[110,10],[160,220]].map(([x,y],i) => (
